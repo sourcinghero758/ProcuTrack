@@ -103,7 +103,7 @@
         }
         /* Kelas untuk highlight navigasi aktif */
         .nav-active-link { /* Navigasi aktif */
-            color: #ffffff !important; /* Merah Gelap untuk highlight */
+            color: #ffffff !important; /* Kekalkan putih cerah untuk aktif di header */
             font-weight: bold !important;
         }
         
@@ -129,9 +129,12 @@
 </head>
 <body class="text-gray-800">
 
-    <header id="header" class="bg-[#215240] shadow-md sticky top-0 z-50"> <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a> <div class="hidden lg:flex items-center space-x-8"> 
-                <a href="index.html#pengenalan-syarikat" class="text-white hover:text-[#EBF2EE]">Tentang Kami</a> <a href="index.html#kelebihan" class="text-white hover:text-[#EBF2EE]">Kelebihan</a>
+    <header id="header" class="bg-[#215240] shadow-md sticky top-0 z-50"> 
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a> 
+            <div class="hidden lg:flex items-center space-x-8"> 
+                <a href="index.html#pengenalan-syarikat" class="text-white hover:text-[#EBF2EE]">Tentang Kami</a> 
+                <a href="index.html#kelebihan" class="text-white hover:text-[#EBF2EE]">Kelebihan</a>
                 <a href="index.html#cara-kerja" class="text-white hover:text-[#EBF2EE]">Cara Kerja</a>
                 <a href="index.html#pendapatan" class="text-white hover:text-[#EBF2EE]">Potensi Pendapatan</a>
                 <a href="index.html#testimonijaya" class="text-white hover:text-[#EBF2EE]">Testimoni</a>
@@ -140,18 +143,21 @@
                 <a href="index.html#faq" class="text-white hover:text-[#EBF2EE]">Soalan Lazim</a>
             </div>
             <a href="index.html#daftar" class="hidden lg:inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg cta-button">Daftar Sekarang</a> 
-            <button id="mobile-menu-button" class="lg:hidden text-white"> <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <button id="mobile-menu-button" class="lg:hidden text-white"> 
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden"> 
-            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a> <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
+            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a> 
+            <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
             <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Cara Kerja</a>
             <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Potensi Pendapatan</a>
             <a href="index.html#testimonijaya" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Testimoni</a>
             <a href="index.html#sokongan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Sokongan</a>
-            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white nav-active-link" id="nav-bahan-hq-mobile">Bahan HQ</a> <a href="index.html#faq" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white font-bold">Daftar Sekarang</a>
+            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white nav-active-link" id="nav-bahan-hq-mobile">Bahan HQ</a> 
+            <a href="index.html#faq" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white font-bold">Daftar Sekarang</a>
         </div>
     </header>
 
@@ -166,63 +172,63 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up">
                         <img src="assets/image/ProcuTrack.jpeg" alt="Panduan Ejen" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 1
+                        <a href="assets/image/ProcuTrack.jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 1
                         </a>
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="100">
                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM.jpeg" alt="Misi Kurangkan Kos" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 2
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM.jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 2
                         </a>
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="200">
                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (1).jpeg" alt="Belian Pukal" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 3
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (1).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 3
                         </a>
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="300">
                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (2).jpeg" alt="Ejen Procutrack Info" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 4
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (2).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 4
                         </a>
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="400">
-                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (3).jpeg" alt="Program Ejen Procutrack" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 5
+                        <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (3).jpeg" alt="Program Ejen Procutrack" class="thumbnail-image">
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (3).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 5
                         </a>
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="500">
-                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (4).jpeg" alt="Panduan Ejen Lanjut" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 6
+                        <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (4).jpeg" alt="Panduan Ejen Lanjut" class="thumbnail-image">
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (4).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 6
                         </a>
                     </div>
 
-                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="600">
                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (5).jpeg" alt="Soalan Lazim Ejen" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 7
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (5).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 7
                         </a>
                     </div>
 
-                     <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="700">
+                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center material-card has-image" data-aos="fade-up" data-aos-delay="700">
                         <img src="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (6).jpeg" alt="Testimoni Baru" class="thumbnail-image">
-                        <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
-                            Copywriting 8
+                        <a href="assets/image/WhatsApp Image 2025-06-13 at 2.17.24 PM (6).jpeg" download class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white cta-button-secondary cta-button mt-2">
+                            Muat Turun Copywriting 8
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        </main>
+    </main>
     
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
