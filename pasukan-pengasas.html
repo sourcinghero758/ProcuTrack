@@ -3,113 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengasas Kami - ProcuTrack</title>
-    <meta name="description" content="Ketahui lebih lanjut mengenai pasukan pengasas dan pimpinan di ProcuTrack.">
-    <meta name="keywords" content="pasukan procutrack, pengasas, ahli pimpinan, profil, izzat, anas, din">
+    <title>Pasukan Pengasas - ProcuTrack</title>
+    <meta name="description" content="Ketahui lebih lanjut mengenai pasukan pengasas di sebalik ProcuTrack dan visi mereka.">
+    <meta name="keywords" content="pasukan, pengasas, ProcuTrack, tentang kami">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Gaya custom tambahan untuk page ini, jika ada, di sini */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB;
+            background-color: #F5F5F0; /* Latar belakang baru */
+            animation: fadeIn 0.5s ease-in-out;
         }
+        /* Style untuk butang CTA */
         .cta-button {
             transition: all 0.3s ease;
+            background-color: #215240; /* Warna butang CTA utama */
+            color: white;
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            background-color: #1A4234; /* Warna hover butang CTA */
         }
-        .profile-card {
-            transition: all 0.3s ease;
+        /* Founder Spotlight background (Jika seksyen ini digunakan di sini) */
+        #founder-spotlight {
+            background-color: #1A4234 !important; /* Hijau yang lebih gelap dari #215240 */
         }
-        .profile-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        #founder-spotlight h2 {
+            color: white !important; /* Pastikan tajuk founder spotlight putih */
+        }
+        #founder-spotlight p {
+            color: #EBF2EE !important; /* Teks cerah untuk kontras */
+        }
+        #founder-spotlight .cta-button { /* Butang dalam founder spotlight */
+             background-color: #FACC15; /* Kuning terang untuk kontras */
+             color: #215240; /* Teks hijau gelap */
+        }
+        #founder-spotlight .cta-button:hover {
+             background-color: #FFDE00; /* Kuning lebih terang untuk hover */
+        }
+        
+        /* Perubahan warna untuk elemen spesifik */
+        h1, h2, h3, h4 { /* Semua heading utama akan guna warna jenama */
+            color: #215240 !important; /* Hijau Gelap */
+        }
+        /* Link navigasi default & hover */
+        #header nav a {
+            color: white; /* Default links to white */
+        }
+        #header nav a:hover {
+            color: #EBF2EE; /* Light green tint on hover */
+        }
+        /* Logo ProcuTrack span */
+        #header nav a .text-white {
+            color: white !important; /* Ensure the span part is white */
+        }
+        /* Mobile menu button */
+        #mobile-menu-button {
+            color: white !important; /* Ensure hamburger icon is white */
+        }
+        /* Kelas untuk highlight navigasi aktif */
+        .nav-active-link { /* Navigasi aktif */
+            color: #C62828 !important; /* Merah Gelap untuk highlight */
+            font-weight: bold !important;
+        }
+        
+        /* Ikon accordion FAQ (jika ada di halaman ini) */
+        .accordion-icon {
+            color: #C62828 !important; /* Merah gelap */
+        }
+        /* Warna teks footer - DIUBAH DI SINI */
+        footer p, footer a {
+            color: white !important; /* Semua teks footer jadi putih */
+        }
+
+        /* Keyframes untuk animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">Procu<span class="text-blue-600">Track</span></a>
-            <div class="hidden lg:flex items-center space-x-8"> 
-                <a href="index.html#pengenalan-syarikat" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
-                <a href="index.html#kelebihan" class="text-gray-600 hover:text-blue-600">Kelebihan</a>
-                <a href="index.html#cara-kerja" class="text-gray-600 hover:text-blue-600">Cara Kerja</a>
-                <a href="index.html#pendapatan" class="text-gray-600 hover:text-blue-600">Potensi Pendapatan</a>
-                <a href="index.html#testimonijaya" class="text-gray-600 hover:text-blue-600">Testimoni</a>
-                <a href="index.html#sokongan" class="text-gray-600 hover:text-blue-600">Sokongan</a>
-                <a href="index.html#faq" class="text-gray-600 hover:text-blue-600">Soalan Lazim</a>
+    <header id="header" class="bg-[#215240] shadow-md sticky top-0 z-50"> <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a> <div class="hidden lg:flex items-center space-x-8"> 
+                <a href="index.html#pengenalan-syarikat" class="text-white hover:text-[#EBF2EE]">Tentang Kami</a> <a href="index.html#kelebihan" class="text-white hover:text-[#EBF2EE]">Kelebihan</a>
+                <a href="index.html#cara-kerja" class="text-white hover:text-[#EBF2EE]">Cara Kerja</a>
+                <a href="index.html#pendapatan" class="text-white hover:text-[#EBF2EE]">Potensi Pendapatan</a>
+                <a href="index.html#testimonijaya" class="text-white hover:text-[#EBF2EE]">Testimoni</a>
+                <a href="index.html#sokongan" class="text-white hover:text-[#EBF2EE]">Sokongan</a>
+                <a href="bahan-hq.html" class="text-white hover:text-[#EBF2EE]">Bahan HQ</a> 
+                <a href="index.html#faq" class="text-white hover:text-[#EBF2EE]">Soalan Lazim</a>
             </div>
             <a href="index.html#daftar" class="hidden lg:inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg cta-button">Daftar Sekarang</a> 
-            <button id="mobile-menu-button" class="lg:hidden text-gray-800"> 
-                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <button id="mobile-menu-button" class="lg:hidden text-white"> <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden"> 
-            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Tentang Kami</a>
-            <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Kelebihan</a>
-            <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Cara Kerja</a>
-            <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Potensi Pendapatan</a>
-            <a href="index.html#testimonijaya" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Testimoni</a>
-            <a href="index.html#sokongan" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Sokongan</a>
-            <a href="index.html#faq" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Soalan Lazim</a>
-            <a href="index.html#daftar" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white font-bold">Daftar Sekarang</a>
+            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a> <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
+            <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Cara Kerja</a>
+            <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Potensi Pendapatan</a>
+            <a href="index.html#testimonijaya" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Testimoni</a>
+            <a href="index.html#sokongan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Sokongan</a>
+            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Bahan HQ</a> 
+            <a href="index.html#faq" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Soalan Lazim</a>
+            <a href="#daftar" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white font-bold">Daftar Sekarang</a>
         </div>
     </header>
 
-    <main class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12" data-aos="fade-down">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Pasukan Pengasas ProcuTrack</h1>
-                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Individu-individu di belakang ProcuTrack yang berdedikasi untuk merevolusikan perolehan anda.</p>
+    <main>
+        <section id="pasukan-pengasas-content" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pasukan Pengasas Kami</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Temui individu-individu berdedikasi di sebalik ProcuTrack.
+                </p>
+                
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/250" alt="Ahli Pasukan 1" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-[#215240]">
+                    <h3 class="text-2xl font-bold text-gray-900">Nama Ahli 1</h3>
+                    <p class="text-lg text-gray-700 mb-4">Jawatan: Ketua Operasi</p>
+                    <p class="text-gray-600 text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg mt-8" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/250" alt="Ahli Pasukan 2" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-[#215240]">
+                    <h3 class="text-2xl font-bold text-gray-900">Nama Ahli 2</h3>
+                    <p class="text-lg text-gray-700 mb-4">Jawatan: Ketua Pemasaran</p>
+                    <p class="text-gray-600 text-left">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
             </div>
-
-            <div class="bg-blue-300 p-8 rounded-xl shadow-lg profile-card text-center mb-10 text-white" data-aos="fade-up">
-    <img src="https://via.placeholder.com/150" alt="Profil Izzat" class="w-32 h-32 rounded-full mx-auto object-cover mb-6 border-4 border-blue-400">
-    <h2 class="text-2xl font-bold text-gray-900 mb-1">MUHAMMAD IZZAT IRFAN BIN ZAINI</h2>
-    <p class="text-base text-gray-600 mb-4">Pengarah Urusan & Pengasas Utama</p>
-    <p class="text-gray-700 text-left">
-        Dengan lebih 5 tahun pengalaman dalam dunia perniagaan, terutamanya dalam bidang sourcing & procurement, Izzat merupakan tulang belakang syarikat ini. Kepakaran beliau merangkumi strategi perolehan, pengurusan pembekal dan pembangunan rangkaian produk.
-    </p>
-</div>
-
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 pb-4 text-center">Pengasas Bersama</h2>
-<div class="bg-blue-300 p-8 rounded-xl shadow-lg profile-card text-center mb-10" data-aos="fade-up">
-
-            <div class="grid md:grid-cols-2 gap-10">
-    <div class="p-8 rounded-xl shadow-lg profile-card text-center text-gray-900" style="background-color: #FFEA00;" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://via.placeholder.com/150" alt="Profil Anas" class="w-32 h-32 rounded-full mx-auto object-cover mb-6 border-4 border-white">
-        <h3 class="text-2xl font-bold mb-2">Anas</h3>
-        <p class="text-base mb-4">Pengasas Bersama</p>
-        <p class="text-left">
-            Seorang yang berdedikasi dalam sokongan pentadbiran syarikat. Walaupun masih baru dalam industri, Anas aktif membina pengalaman dan terlibat dalam pengurusan operasi asas syarikat.
-        </p>
-    </div>
-
-    <div class="p-8 rounded-xl shadow-lg profile-card text-center text-gray-900" style="background-color: #FFEA00;" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://via.placeholder.com/150" alt="Profil Din" class="w-32 h-32 rounded-full mx-auto object-cover mb-6 border-4 border-white">
-        <h3 class="text-2xl font-bold mb-2">Din</h3>
-        <p class="text-base mb-4">Pengasas Bersama</p>
-        <p class="text-left">
-            Din turut bersama dalam pasukan pengasas dan banyak menyumbang dalam penyelarasan dalaman serta komunikasi dengan pelanggan. Beliau kini fokus pada peningkatan kemahiran dalam bidang pengurusan projek dan sourcing.
-        </p>
-    </div>
-</div>
-
-            </div>
-        </div>
+        </section>
     </main>
-
-    <footer class="bg-gray-800 text-white py-6 mt-16">
+    
+    <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
             <p>© 2024 ProcuTrack. Hak Cipta Terpelihara.</p>
             <p class="text-sm text-gray-400 mt-1">ProcuTrack - Kos Lebih Bijak, Bisnes Lebih Laju!</p>
@@ -125,14 +166,15 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
-                duration: 800,
-                once: true
+                duration: 800, // Durasi animasi dalam ms
+                once: true    // Animasi hanya berjalan sekali
             });
 
-            // Mobile menu toggle (kod yang sama seperti index.html)
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const hamburgerPath = document.getElementById('hamburger-path');
+            const navLinks = mobileMenu.querySelectorAll('a');
+
             const hamburgerD = "M4 6h16M4 12h16m-7 6h7";
             const closeD = "M6 18L18 6M6 6l12 12";
 
@@ -146,16 +188,37 @@
                     hamburgerPath.setAttribute('d', closeD);
                 }
             }
+
             mobileMenuButton.addEventListener('click', toggleMenu);
 
-            // Tutup menu mudah alih apabila pautan diklik (kod yang sama seperti index.html)
-            const navLinks = mobileMenu.querySelectorAll('a');
             navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMenu();
-                    }
-                });
+                let linkPathname = link.getAttribute('href').split('#')[0]; // Ambil hanya path, buang #anchors
+                let currentPathname = window.location.pathname.split('/').pop(); // Ambil nama fail semasa
+
+                // Normalize for root path comparison
+                if (currentPathname === 'index.html' || currentPathname === '') {
+                    currentPathname = ''; // Treat as root for comparison
+                }
+                if (linkPathname === 'index.html' || linkPathname === './') {
+                    linkPathname = ''; // Treat as root for comparison
+                }
+                
+                // Compare the base filenames (e.g., 'bahan-hq.html' vs 'bahan-hq.html')
+                if (currentPathname === linkPathname) {
+                    link.classList.remove('text-white', 'hover:text-[#EBF2EE]', 'text-gray-600', 'hover:text-blue-600'); // Buang semua kelas warna dan hover
+                    link.classList.add('nav-active-link');
+                } else if (linkPathname === '' && currentPathname === '') { // Special case for root index.html
+                    link.classList.remove('text-white', 'hover:text-[#EBF2EE]', 'text-gray-600', 'hover:text-blue-600'); // Buang semua kelas warna dan hover
+                    link.classList.add('nav-active-link');
+                }
+                
+                // If it's a link to another page, let the browser handle the navigation
+                if (link.getAttribute('href').endsWith('.html')) {
+                    // No need to toggleMenu if it's already navigating to another page
+                } else if (!mobileMenu.classList.contains('hidden')) {
+                    // If it's an anchor link on the same page, close the menu
+                    toggleMenu();
+                }
             });
         });
     </script>
