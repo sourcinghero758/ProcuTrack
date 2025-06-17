@@ -32,6 +32,13 @@
             box-shadow: 0 8px 20px rgba(33, 82, 64, 0.4);
             background-color: #1A4234; /* Hijau Gelap sedikit lagi */
         }
+        /* Style untuk butang CTA sekunder (merah gelap) */
+        .cta-button-secondary {
+            background-color: #C62828; /* Merah Gelap */
+        }
+        .cta-button-secondary:hover {
+            background-color: #A02020; /* Merah Gelap hover */
+        }
         .chart-container {
             position: relative;
             width: 100%;
@@ -199,8 +206,7 @@
     <header id="header" class="bg-[#215240] shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a>
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="index.html#pengenalan-syarikat">Tentang Kami</a>
+            <div class="hidden lg:flex items-center space-x-6"> <a href="index.html#pengenalan-syarikat">Tentang Kami</a>
                 <a href="index.html#kelebihan">Kelebihan</a>
                 <a href="index.html#cara-kerja">Cara Kerja</a>
                 <a href="index.html#pendapatan">Potensi Pendapatan</a>
@@ -209,7 +215,8 @@
                 <a href="bahan-hq.html" id="nav-bahan-hq-desktop">Bahan HQ</a>
                 <a href="index.html#faq">Soalan Lazim</a>
             </div>
-            <a href="register.html" class="hidden lg:inline-block bg-[#215240] text-white font-bold py-3 px-8 rounded-lg cta-button">Daftar Sekarang</a>
+                <a href="key-in.html" class="bg-[#C62828] text-white font-bold py-3 px-8 rounded-lg cta-button cta-button-secondary">Key-In Tempahan</a>
+            </div>
             <button id="mobile-menu-button" class="lg:hidden text-white">
                 <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -226,6 +233,7 @@
             <a href="bahan-hq.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white" id="nav-bahan-hq-mobile">Bahan HQ</a>
             <a href="index.html#faq" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Soalan Lazim</a>
             <a href="register.html" class="block text-center py-3 px-4 text-base bg-[#FACC15] text-[#215240] font-bold cta-button mt-4 mx-6">Daftar Sekarang!</a>
+            <a href="key-in.html" class="block text-center py-3 px-4 text-base bg-[#C62828] text-white font-bold cta-button mt-2 mx-6">Key-In Tempahan</a>
             <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" target="_blank" download class="block text-center py-3 px-4 text-base bg-[#215240] text-white font-bold cta-button mt-2 mx-6">Muat Turun Info Kit</a>
         </div>
     </header>
@@ -254,7 +262,7 @@
                     <h2 class="text-4xl md:text-5xl font-extrabold mb-4">MUHAMMAD IZZAT IRFAN BIN ZAINI </h2>
                     <p class="text-xl font-semibold text-blue-200 mb-4">CEO & Ketua Strategi</p>
                     <p class="text-lg text-blue-100 mb-8 leading-relaxed">
-                        isi di sini 
+                        isi di sini
                     </p>
                     <a href="pasukan-pengasas.html" class="bg-[#FACC15] text-[#215240] font-bold py-3 px-10 rounded-full cta-button inline-block hover:bg-[#FFC400]">
                         Ketahui Lebih Lanjut Tentang Pasukan Kami →
@@ -270,16 +278,19 @@
                 </div>
                 <div class="max-w-4xl mx-auto space-y-6" data-aos="fade-up">
                     <p class="text-lg text-gray-700 text-center leading-relaxed">
-                        ProcuTrack ialah sebuah syarikat yang pakar dalam penyumberan dan perolehan (sourcing & procurement) pelbagai jenis produk dan perkhidmatan untuk pelanggan dari pelbagai industri, dengan fokus utama pada pasaran China dan Malaysia. Kami bukan sekadar penyedia perkhidmatan; kami adalah rakan kongsi strategik anda dalam rantaian bekalan global.
+ProcuTrack bantu orang bisnes kat Malaysia beli barang dari China dengan cara yang lebih senang, murah dan selamat. Klien tak payah pening fikir shipping, cari supplier atau nego harga — semua kami tolong urus.
                     </p>
                     <p class="text-lg text-gray-700 text-center leading-relaxed">
-                        Dengan rangkaian pembekal global dan tempatan yang luas, kami komited untuk menyediakan penyelesaian perolehan yang cekap, telus, menjimatkan kos, dan paling penting, berkualiti tinggi. Kami mengutamakan kepuasan pelanggan dengan memastikan setiap transaksi diuruskan dengan profesionalisme tertinggi.
+Lepas klien bagi info barang yang dia nak, team kami akan uruskan semuanya sampai barang selamat sampai ke tangan dia.
                     </p>
                     <p class="text-lg text-gray-700 text-center leading-relaxed">
-                        Program Ejen ProcuTrack pula direka khas untuk individu seperti anda yang ingin menjana pendapatan tambahan atau sepenuh masa melalui platform kami. Anda hanya perlu memperkenalkan pemilik bisnes kepada ProcuTrack, dan kami akan uruskan selebihnya. Kami mengendalikan semua kerumitan, membolehkan anda fokus sepenuhnya pada potensi pendapatan anda.
+Dalam masa sama, kami buka peluang untuk sesiapa saja jadi ejen ProcuTrack. Kerja senang je — cari orang yang nak beli barang dari China, kenalkan pada kami, dan ejen akan dapat komisen setiap bulan ikut jumlah pembelian pelanggan tu.
+                    </p>
+                    <p class="text-lg text-gray-700 text-center leading-relaxed">
+Tak perlu modal, tak perlu pegang stok. Ejen fokus cari pelanggan je, HQ akan urus semua dari situ.
                     </p>
                 </div>
-            </div>
+                </div>
         </section>
 
         <section id="kelebihan" class="py-20 bg-gray-100">
@@ -331,48 +342,42 @@
     </div>
 
     <div class="relative" data-aos="fade-up">
-      <!-- Line untuk 1-4 -->
-      <div class="hidden lg:block absolute top-[30%] left-0 w-full h-1 bg-gray-200"></div>
+            <div class="hidden lg:block absolute top-[30%] left-0 w-full h-1 bg-gray-200"></div>
 
-      <!-- Grid 1-4 -->
-      <div class="grid md:grid-cols-4 gap-8 relative z-10">
-        <!-- Langkah 1–4 seperti biasa -->
-        <!-- ... (sama seperti sebelum ini) ... -->
-        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-          <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">1</div>
-          <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu pegang stok</h3>
-          <p class="text-gray-600 text-center leading-relaxed">Semua penghantaran diuruskan oleh ProcuTrack.</p>
-        </div>
-        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-          <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">2</div>
-          <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu urus shipping</h3>
-          <p class="text-gray-600 text-center leading-relaxed">
-            Berhubung dengan prospek, kumpul maklumat mereka, dan bantu mereka memulakan pembelian pertama melalui platform ProcuTrack dengan panduan anda.
-          </p>
-        </div>
-        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-          <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">3</div>
-          <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Boleh buat sambilan atau sepenuh masa</h3>
-          <p class="text-gray-600 text-center leading-relaxed">Fleksibel mengikut keupayaan dan masa anda.</p>
-        </div>
-        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-          <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">4</div>
-          <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">HQ sediakan sokongan</h3>
-          <p class="text-gray-600 text-center leading-relaxed">Modul latihan, bahan promosi & bantuan berterusan.</p>
-        </div>
-      </div>
+            <div class="grid md:grid-cols-4 gap-8 relative z-10">
+                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
+              <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">1</div>
+              <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu pegang stok</h3>
+              <p class="text-gray-600 text-center leading-relaxed">Semua penghantaran diuruskan oleh ProcuTrack.</p>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
+              <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">2</div>
+              <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu urus shipping</h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Berhubung dengan prospek, kumpul maklumat mereka, dan bantu mereka memulakan pembelian pertama melalui platform ProcuTrack dengan panduan anda.
+              </p>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
+              <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">3</div>
+              <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Boleh buat sambilan atau sepenuh masa</h3>
+              <p class="text-gray-600 text-center leading-relaxed">Fleksibel mengikut keupayaan dan masa anda.</p>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
+              <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">4</div>
+              <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">HQ sediakan sokongan</h3>
+              <p class="text-gray-600 text-center leading-relaxed">Modul latihan, bahan promosi & bantuan berterusan.</p>
+            </div>
+          </div>
 
-      <!-- Line untuk kotak no 5 -->
-      <div class="hidden lg:block absolute top-[72%] left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-gray-200"></div>
+            <div class="hidden lg:block absolute top-[72%] left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-gray-200"></div>
 
-      <!-- Kotak no 5 -->
-      <div class="flex justify-center mt-10 relative z-10">
-        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md w-full md:w-1/2">
-          <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">5</div>
-          <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Potensi pendapatan tinggi</h3>
-          <p class="text-gray-600 text-center leading-relaxed">Bila bawa pelanggan konsisten.</p>
-        </div>
-      </div>
+            <div class="flex justify-center mt-10 relative z-10">
+                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md w-full md:w-1/2">
+                    <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">5</div>
+                    <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Potensi pendapatan tinggi</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">Bila bawa pelanggan konsisten.</p>
+                </div>
+            </div>
     </div>
   </div>
 </section>
@@ -449,11 +454,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-                    </div>
                 </div>
-            </div>
+                </div>
         </section>
 
         <section id="sokongan" class="py-20 bg-white">
@@ -512,64 +514,64 @@
                      <p class="text-xl text-gray-600 mt-2 max-w-2xl mx-auto">Kami faham anda mungkin mempunyai beberapa pertanyaan. Di sini kami kumpulkan dan jawab persoalan yang sering diajukan untuk memberi anda gambaran yang jelas.</p>
                  </div>
                  <div class="max-w-4xl mx-auto">
-                    <div class="space-y-6">
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Siapakah yang layak menjadi ejen ProcuTrack?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Sesiapa sahaja warganegara Malaysia berumur 18 tahun ke atas yang berminat untuk menjana pendapatan tambahan atau sepenuh masa. Program ini amat sesuai untuk suri rumah, pelajar, pekerja sepenuh masa, atau sesiapa sahaja yang mempunyai **rangkaian kenalan pemilik bisnes kecil dan sederhana (PKS) atau penjual online** yang memerlukan produk berkualiti dari China.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="100">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Adakah sebarang bayaran dikenakan untuk pendaftaran?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Tidak. Pendaftaran sebagai ejen ProcuTrack adalah **percuma sepenuhnya**. Kami berpegang teguh kepada model perniagaan tanpa risiko untuk ejen kami. Anda boleh mula menjana pendapatan serta-merta selepas pendaftaran dan melengkapkan latihan awal yang kami sediakan.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="200">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Bagaimanakah proses latihan dan onboarding ejen dijalankan?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Selepas pendaftaran berjaya, anda akan diberikan akses eksklusif ke **modul latihan lengkap dalam format video dan PDF** melalui portal ejen kami. Selain itu, anda juga akan dijemput ke dalam **kumpulan sokongan WhatsApp/Telegram eksklusif** di mana anda boleh berinteraksi dengan pasukan HQ dan rakan-rakan ejen lain untuk mendapatkan bimbingan dan motivasi.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="300">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Bagaimanakah dan bilakah komisen akan dibayar?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Komisen akan dibayar pada **minggu pertama setiap bulan**. Jumlah komisen akan dikreditkan terus ke akaun bank anda setelah kami mengira jumlah jualan sah daripada semua pelanggan yang anda perkenalkan pada bulan sebelumnya. Anda boleh memantau butiran komisen anda dengan mudah melalui dashboard ejen peribadi anda.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="400">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Berapa banyak masa yang perlu saya luangkan sebagai ejen?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                ProcuTrack menawarkan **masa yang sangat fleksibel**. Anda boleh menjadikannya sebagai pendapatan sampingan dengan meluangkan beberapa jam seminggu, atau sebagai kerjaya sepenuh masa untuk potensi pendapatan yang lebih tinggi. Kuncinya adalah konsisten dalam mencari dan membantu pelanggan, tanpa terikat dengan waktu pejabat.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="500">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Apakah yang berlaku jika akaun ejen saya tidak aktif?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Akaun ejen yang tidak mempunyai sebarang aktiviti atau jualan pelanggan selama tiga (3) bulan berturut-turut akan digantung sementara. Walau bagaimanapun, anda boleh **mengaktifkannya semula dengan mudah dengan menghubungi pasukan sokongan kami** dan memulakan semula aktiviti jualan anda. Kami sentiasa sedia membantu anda kembali ke landasan kejayaan.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                     <div class="space-y-6">
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Siapakah yang layak menjadi ejen ProcuTrack?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 Sesiapa sahaja warganegara Malaysia berumur 18 tahun ke atas yang berminat untuk menjana pendapatan tambahan atau sepenuh masa. Program ini amat sesuai untuk suri rumah, pelajar, pekerja sepenuh masa, atau sesiapa sahaja yang mempunyai **rangkaian kenalan pemilik bisnes kecil dan sederhana (PKS) atau penjual online** yang memerlukan produk berkualiti dari China.
+                             </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="100">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Adakah sebarang bayaran dikenakan untuk pendaftaran?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 Tidak. Pendaftaran sebagai ejen ProcuTrack adalah **percuma sepenuhnya**. Kami berpegang teguh kepada model perniagaan tanpa risiko untuk ejen kami. Anda boleh mula menjana pendapatan serta-merta selepas pendaftaran dan melengkapkan latihan awal yang kami sediakan.
+                             </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="200">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Bagaimanakah proses latihan dan onboarding ejen dijalankan?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 Selepas pendaftaran berjaya, anda akan diberikan akses eksklusif ke **modul latihan lengkap dalam format video dan PDF** melalui portal ejen kami. Selain itu, anda juga akan dijemput ke dalam **kumpulan sokongan WhatsApp/Telegram eksklusif** di mana anda boleh berinteraksi dengan pasukan HQ dan rakan-rakan ejen lain untuk mendapatkan bimbingan dan motivasi.
+                             </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="300">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Bagaimanakah dan bilakah komisen akan dibayar?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 Komisen akan dibayar pada **minggu pertama setiap bulan**. Jumlah komisen akan dikreditkan terus ke akaun bank anda setelah kami mengira jumlah jualan sah daripada semua pelanggan yang anda perkenalkan pada bulan sebelumnya. Anda boleh memantau butiran komisen anda dengan mudah melalui dashboard ejen peribadi anda.
+                             </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="400">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Berapa banyak masa yang perlu saya luangkan sebagai ejen?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 ProcuTrack menawarkan **masa yang sangat fleksibel**. Anda boleh menjadikannya sebagai pendapatan sampingan dengan meluangkan beberapa jam seminggu, atau sebagai kerjaya sepenuh masa untuk potensi pendapatan yang lebih tinggi. Kuncinya adalah konsisten dalam mencari dan membantu pelanggan, tanpa terikat dengan waktu pejabat.
+                             </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="500">
+                             <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
+                                 Apakah yang berlaku jika akaun ejen saya tidak aktif?
+                                 <span class="accordion-icon text-red-600">+</span>
+                             </button>
+                             <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
+                                 Akaun ejen yang tidak mempunyai sebarang aktiviti atau jualan pelanggan selama tiga (3) bulan berturut-turut akan digantung sementara. Walau bagaimanapun, anda boleh **mengaktifkannya semula dengan mudah dengan menghubungi pasukan sokongan kami** dan memulakan semula aktiviti jualan anda. Kami sentiasa sedia membantu anda kembali ke landasan kejayaan.
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
         </section>
 
         <section id="daftar" class="py-24 bg-[#215240] text-white" data-aos="fade-up">
@@ -672,7 +674,7 @@
                         link.classList.add('nav-active-link');
                         link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
                     }
-                    // Logik untuk halaman spesifik (bahan-hq.html, pasukan-pengasas.html, register.html)
+                    // Logik untuk halaman spesifik (bahan-hq.html, pasukan-pengasas.html, register.html, key-in.html)
                     else if (currentPathname === linkPath && currentPathname !== 'index.html' && currentPathname !== '') {
                         link.classList.add('nav-active-link');
                         link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
@@ -765,13 +767,13 @@
                                             label += 'RM ' + context.parsed.y.toLocaleString('ms-MY', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                                         }
                                         return label;
-                                    }
-                                },
-                                titleFont: { size: 16 },
-                                bodyFont: { size: 14 },
-                                padding: 12,
-                                boxPadding: 6,
-                                displayColors: true,
+                                    },
+                                    titleFont: { size: 16 },
+                                    bodyFont: { size: 14 },
+                                    padding: 12,
+                                    boxPadding: 6,
+                                    displayColors: true,
+                                }
                             }
                         }
                     }
@@ -782,36 +784,19 @@
                     salesValueSpan.textContent = sales.toLocaleString('ms-MY');
 
                     let calculatedCommission = 0;
-                    let remainingSales = sales;
+                    let currentSales = sales; // Gunakan pembolehubah berasingan untuk mengesan baki jualan
 
-                    // Pengiraan komisen mengikut tier
-                    if (remainingSales > 0) {
-                        let tier1Sales = Math.min(remainingSales, 30000);
-                        calculatedCommission += tier1Sales * 0.05;
-                        remainingSales -= tier1Sales;
-                    }
-                    if (remainingSales > 0) {
-                        let tier2Sales = Math.min(remainingSales, 30000);
-                        calculatedCommission += tier2Sales * 0.05;
-                        remainingSales -= tier2Sales;
-                    }
-                    if (remainingSales > 0) {
-                        let tier3Sales = Math.min(remainingSales, 30000);
-                        calculatedCommission += tier3Sales * 0.05;
-                        remainingSales -= tier3Sales;
-                    }
-                    if (remainingSales > 0) {
-                        let tier4Sales = Math.min(remainingSales, 30000);
-                        calculatedCommission += tier4Sales * 0.06;
-                        remainingSales -= tier4Sales;
-                    }
-                    if (remainingSales > 0) {
-                        let tier5Sales = Math.min(remainingSales, 30000);
-                        calculatedCommission += tier5Sales * 0.07;
-                        remainingSales -= tier5Sales;
-                    }
-                    if (remainingSales > 0) { // Untuk tier Super Ejen (lebih 150,000)
-                        calculatedCommission += remainingSales * 0.075;
+                    // Hitung komisen berdasarkan tier
+                    let prevLimit = 0;
+                    for (let i = 0; i < commissionTiers.length; i++) {
+                        const tier = commissionTiers[i];
+                        if (currentSales > prevLimit) { // Semak jika ada jualan yang layak untuk tier ini
+                            // Kira jualan yang benar-benar jatuh dalam julat tier semasa
+                            const applicableSales = Math.min(currentSales, tier.limit) - prevLimit;
+                            calculatedCommission += applicableSales * tier.rate;
+                        }
+                        prevLimit = tier.limit; // Tetapkan had atas tier semasa sebagai had bawah untuk tier seterusnya
+                        if (currentSales <= prevLimit) break; // Berhenti jika semua jualan telah dikira
                     }
 
                     let rateText = "0%"; // Default
