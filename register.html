@@ -3,179 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Ejen ProcuTrack - Mulakan Perjalanan Anda</title>
-    <meta name="description" content="Daftar sebagai ejen ProcuTrack sekarang secara percuma! Isi borang untuk mulakan langkah anda menjana pendapatan tanpa modal.">
-    <meta name="keywords" content="daftar ejen, pendaftaran procutrack, borang ejen, sertai procutrack, ejen import china">
+    <title>ProcuTrack Services: Permintaan Sebut Harga</title>
+    <meta name="description" content="Sila lengkapkan maklumat di bawah untuk membolehkan pihak kami membuat semakan dan mengeluarkan sebut harga bagi barang yang anda perlukan.">
+    <meta name="keywords" content="procutrack, sourcing china malaysia, pembelian barang, sebut harga, import eksport">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* Base Body & General Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F5F5F0; /* Latar belakang baru */
+            font-family: 'Inter', sans-serif; /* Main font for the website */
+            background-color: #F5F5F0; /* Light background for the overall page */
             animation: fadeIn 0.5s ease-in-out;
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-            background-color: #215240; /* Warna butang CTA utama */
-            color: white;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-            background-color: #1A4234; /* Warna hover butang CTA */
-        }
-        h1, h2, h3, h4 { /* Semua heading utama akan guna warna jenama */
-            color: #215240 !important; /* Hijau Gelap */
-        }
-        #header nav a {
-            color: white; /* Default links to white */
-        }
-        #header nav a:hover {
-            color: #EBF2EE; /* Light green tint on hover */
-        }
-        #header nav a .text-white {
-            color: white !important; /* Ensure the span part is white */
-        }
-        #mobile-menu-button {
-            color: white !important; /* Ensure hamburger icon is white */
-        }
-        .nav-active-link { /* Navigasi aktif */
-            color: #ffffff !important; /* Merah Gelap untuk highlight */
-            font-weight: bold !important;
-        }
-        footer p, footer a {
-            color: white !important; /* Semua teks footer jadi putih */
+            color: #202124; /* Default text color */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Header Specific Styles */
+        #header {
+            background-color: #215240; /* Dark green from ProcuTrack branding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        #header nav a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        #header nav a:hover {
+            color: #EBF2EE; /* Light green tint on hover */
+        }
+        #header .cta-button { /* Daftar Sekarang button style */
+            background-color: #38a169; /* A slightly different green for CTA button */
+            color: white;
+            padding: 8px 24px;
+            border-radius: 9999px; /* Pill shape */
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        #header .cta-button:hover {
+            background-color: #2f855a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #mobile-menu-button {
+            color: white !important;
+        }
+        #mobile-menu a {
+            color: white;
+        }
+        #mobile-menu a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 40px 0; /* Vertical padding for the main content area */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Google Forms-like Card Styles */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px 0 rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15);
+            max-width: 640px;
+            width: 100%;
+            margin: 0 auto; /* Center the form container */
+        }
+        .header-card {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 24px;
+            padding-bottom: 16px;
+            position: relative;
+        }
+        .header-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background-color: #215240; /* Dark green from ProcuTrack branding */
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .logo-placeholder {
+            width: 100%;
+            height: 120px; /* Adjust height as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .logo-placeholder img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Ensures the entire image is visible, scales down if too big */
+        }
+        h1.form-title {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #202124;
+            margin-bottom: 8px;
+        }
+        h2.form-subtitle {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 400;
+            line-height: 1.75;
+            color: #202124;
+            margin-bottom: 16px;
+        }
+        .description-text {
+            font-size: 0.875rem;
+            color: #5f6368;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .email-info {
+            font-size: 0.875rem;
+            color: #5f6368;
+            margin-bottom: 8px;
+        }
+        .email-info .switch-account {
+            color: #1a73e8;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .privacy-note {
+            font-size: 0.75rem;
+            color: #5f6368;
+            margin-bottom: 24px;
+        }
+        .required-indicator {
+            font-size: 0.75rem;
+            color: #202124;
+        }
+        .required-indicator .asterisk {
+            color: #d93025;
+        }
+
+        /* Section Card Styles */
+        .section-card {
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px 0 rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .section-header .checkbox-icon {
+            color: #0c8a4c;
+            font-size: 1.25rem;
+            margin-right: 8px;
+        }
+        .section-title {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 400;
+            line-height: 1.75;
+            color: #202124;
+        }
+        .section-description {
+            font-size: 0.875rem;
+            color: #5f6368;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        /* Input Field Styles */
+        .form-field {
+            margin-bottom: 24px;
+        }
+        .form-field label {
+            font-size: 1rem;
+            color: #202124;
+            font-weight: 400;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .form-field .required-label-asterisk {
+            color: #d93025;
+            font-weight: 500;
+        }
+        .form-field input[type="text"],
+        .form-field input[type="email"],
+        .form-field input[type="tel"],
+        .form-field textarea {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid #dadce0;
+            outline: none;
+            font-size: 1rem;
+            color: #202124;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: transparent;
+            resize: vertical;
+            line-height: 1.5;
+        }
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: #757575;
+            font-size: 0.875rem;
+        }
+        .form-field input[type="text"]:focus,
+        .form-field input[type="email"]:focus,
+        .form-field input[type="tel"]:focus,
+        .form-field textarea:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 1px 0 0 #1a73e8;
+        }
+
+        /* Navigation Buttons */
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            border-top: 1px solid #dadce0;
+            background-color: #f8f9fa;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .next-button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .next-button:hover {
+            background-color: #1764cc;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+        }
+        .clear-form-button {
+            background: none;
+            border: none;
+            color: #1a73e8;
+            font-weight: 500;
+            font-size: 0.875rem;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .clear-form-button:hover {
+            background-color: rgba(26,115,232,0.04);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #215240; /* Dark green from ProcuTrack branding */
+            color: white;
+            padding: 24px 0;
+            text-align: center;
+        }
+        footer p, footer a {
+            color: white !important;
+            font-size: 0.875rem;
+        }
+        footer a {
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom-text {
+            color: #EBF2EE; /* Lighter text for the tagline */
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .footer-links-wrapper {
+            margin-top: 12px;
+            font-size: 0.875rem;
+        }
+        .footer-links-wrapper span {
+            color: #EBF2EE;
+        }
+        /* New styles for Google Forms footer content in the main page footer */
+        .google-forms-info-footer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light border to separate from main footer content */
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7); /* Lighter white for this content */
+        }
+        .google-forms-info-footer a {
+            color: rgba(255, 255, 255, 0.9) !important; /* Slightly brighter white for links */
+            text-decoration: underline;
+        }
+        .google-forms-info-footer a:hover {
+            text-decoration: none;
+        }
+        .google-forms-info-footer .report-link {
+            display: block; /* Make it a block element for its own line */
+            margin-top: 8px; /* Space above it */
+        }
+        .google-forms-info-footer .google-forms-brand-text {
+            display: block; /* Make it a block element for its own line */
+            margin-top: 12px; /* Space above it */
+            font-size: 0.875rem; /* Slightly larger for the brand */
+            font-weight: 500;
+            color: white;
+        }
     </style>
 </head>
-<body class="text-gray-800">
+<body>
 
-    <header id="header" class="bg-[#215240] shadow-md sticky top-0 z-50">
+    <header id="header" class="shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a>
             <div class="hidden lg:flex items-center space-x-8">
-                <a href="index.html#pengenalan-syarikat" class="text-white hover:text-[#EBF2EE]">Tentang Kami</a>
-                <a href="index.html#kelebihan" class="text-white hover:text-[#EBF2EE]">Kelebihan</a>
-                <a href="index.html#cara-kerja" class="text-white hover:text-[#EBF2EE]">Cara Kerja</a>
-                <a href="index.html#pendapatan" class="text-white hover:text-[#EBF2EE]">Potensi Pendapatan</a>
-                <a href="index.html#testimonijaya" class="text-white hover:text-[#EBF2EE]">Testimoni</a>
-                <a href="index.html#sokongan" class="text-white hover:text-[#EBF2EE]">Sokongan</a>
-                <a href="bahan-hq.html" class="text-white hover:text-[#EBF2EE]" id="nav-bahan-hq-desktop">Bahan HQ</a>
-                <a href="index.html#faq" class="text-white hover:text-[#EBF2EE]">Soalan Lazim</a>
+                <a href="index.html#pengenalan-syarikat" class="hover:text-[#EBF2EE]">Tentang Kami</a>
+                <a href="index.html#kelebihan" class="hover:text-[#EBF2EE]">Kelebihan</a>
+                <a href="index.html#cara-kerja" class="hover:text-[#EBF2EE]">Cara Kerja</a>
+                <a href="index.html#pendapatan" class="hover:text-[#EBF2EE]">Potensi Pendapatan</a>
+                <a href="index.html#testimonijaya" class="hover:text-[#EBF2EE]">Testimoni</a>
+                <a href="index.html#sokongan" class="hover:text-[#EBF2EE]">Sokongan</a>
+                <a href="bahan-hq.html" class="hover:text-[#EBF2EE]">Bahan HQ</a>
+                <a href="index.html#faq" class="hover:text-[#EBF2EE]">Soalan Lazim</a>
             </div>
-            <a href="register.html" class="hidden lg:inline-block bg-green-600 text-white font-bold py-2 px-6 rounded-lg cta-button">Daftar Sekarang</a>
+            <a href="register.html" class="hidden lg:inline-block cta-button">Daftar Ejen</a>
             <button id="mobile-menu-button" class="lg:hidden text-white">
                 <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden lg:hidden">
-            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a>
-            <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
-            <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Cara Kerja</a>
-            <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Potensi Pendapatan</a>
-            <a href="index.html#testimonijaya" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Testimoni</a>
-            <a href="index.html#sokongan" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Sokongan</a>
-            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white" id="nav-bahan-hq-mobile">Bahan HQ</a>
-            <a href="index.html#faq" class="block text-center py-2 px-4 text-sm text-white hover:bg-opacity-10 hover:bg-white">Soalan Lazim</a>
-            <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" target="_blank" download class="block text-center py-4 px-4 text-sm bg-green-600 text-white font-bold cta-button">Muat Turun Info Kit</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#215240] py-4">
+            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Tentang Kami</a>
+            <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Kelebihan</a>
+            <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Cara Kerja</a>
+            <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Potensi Pendapatan</a>
+            <a href="index.html#testimonijaya" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Testimoni</a>
+            <a href="index.html#sokongan" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Sokongan</a>
+            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Bahan HQ</a>
+            <a href="index.html#faq" class="block text-center py-2 px-4 text-sm hover:bg-opacity-10">Soalan Lazim</a>
+            <a href="register.html" class="block text-center py-3 px-4 text-sm cta-button mx-4 mt-2">Daftar Ejen</a>
         </div>
     </header>
 
-    <main class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <div class="text-center mb-12" data-aos="fade-down">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Daftar Sebagai Ejen ProcuTrack</h1>
-                <p class="text-lg text-gray-600">Isi borang di bawah untuk mulakan perjalanan anda menjana pendapatan bersama kami. Pendaftaran adalah percuma!</p>
-            </div>
+    <main>
+        <div class="container mx-auto px-6">
+            <div class="form-container">
+                <div class="header-card">
+                    <div class="logo-placeholder">
+                        <img src="assets/Daftar Ejen/ProcuTrack.jpeg" alt="ProcuTrack Logo">
+                    </div>
+                    <h1 class="form-title">ProcuTrack Services</h1>
+                    <h2 class="form-subtitle">Sourcing & Pembelian Barang (China–Malaysia)</h2>
+                    <p class="description-text">Sila lengkapkan maklumat di bawah untuk membolehkan pihak kami membuat semakan dan mengeluarkan sebut harga bagi barang yang anda perlukan. Pastikan maklumat lengkap dan tepat.</p>
+                    <p class="email-info">takemikazuchimk24@gmail.com <a href="#" class="switch-account">Switch account</a></p>
+                    <p class="privacy-note">The name, email, and photo associated with your Google account will be recorded when you upload files and submit this form</p>
+                    <p class="required-indicator"><span class="asterisk">*</span> Indicates required question</p>
+                </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
-                <form id="registration-form" action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="nama-penuh" class="block text-sm font-medium text-gray-700">Nama Penuh <span class="text-red-500">*</span></label>
-                        <input type="text" id="nama-penuh" name="nama-penuh" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#215240] focus:border-[#215240] sm:text-sm">
+                <form action="#" method="POST">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <span class="checkbox-icon">&#10003;</span>
+                            <span class="section-title">SEKSYEN 1: Maklumat Pelanggan</span>
+                        </div>
+                        <p class="section-description">Sila isi maklumat peribadi atau syarikat anda dengan lengkap. Ini akan membantu kami untuk menghubungi anda dan menyediakan sebut harga serta urusan penghantaran dengan tepat.</p>
+
+                        <div class="form-field">
+                            <label for="full_name">Nama Penuh <span class="required-label-asterisk">*</span></label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="Your answer">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="company_name">Nama Syarikat / Organisasi (jika ada)</label>
+                            <input type="text" id="company_name" name="company_name" placeholder="Your answer">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone_whatsapp">Nombor Telefon / WhatsApp <span class="required-label-asterisk">*</span></label>
+                            <input type="tel" id="phone_whatsapp" name="phone_whatsapp" required placeholder="Your answer">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email_address">Alamat Emel <span class="required-label-asterisk">*</span></label>
+                            <input type="email" id="email_address" name="email_address" required placeholder="Your answer">
+                        </div>
+
+                        <div class="form-field mb-0">
+                            <label for="delivery_address">Alamat Lokasi Penghantaran Penuh <span class="required-label-asterisk">*</span></label>
+                            <textarea id="delivery_address" name="delivery_address" rows="3" required placeholder="Your answer"></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <label for="emel" class="block text-sm font-medium text-gray-700">Alamat Emel <span class="text-red-500">*</span></label>
-                        <input type="email" id="emel" name="emel" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#215240] focus:border-[#215240] sm:text-sm">
-                    </div>
-                    <div>
-                        <label for="no-telefon" class="block text-sm font-medium text-gray-700">Nombor Telefon (WhatsApp) <span class="text-red-500">*</span></label>
-                        <input type="tel" id="no-telefon" name="no-telefon" pattern="[0-9]{10,15}" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#215240] focus:border-[#215240] sm:text-sm">
-                        <p class="mt-2 text-sm text-gray-500">Sila masukkan nombor telefon yang sah (cth: 0123456789).</p>
-                    </div>
-                    <div>
-                        <label for="negeri" class="block text-sm font-medium text-gray-700">Negeri <span class="text-red-500">*</span></label>
-                        <select id="negeri" name="negeri" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#215240] focus:border-[#215240] sm:text-sm">
-                            <option value="">-- Sila Pilih Negeri --</option>
-                            <option value="Johor">Johor</option>
-                            <option value="Kedah">Kedah</option>
-                            <option value="Kelantan">Kelantan</option>
-                            <option value="Melaka">Melaka</option>
-                            <option value="Negeri Sembilan">Negeri Sembilan</option>
-                            <option value="Pahang">Pahang</option>
-                            <option value="Pulau Pinang">Pulau Pinang</option>
-                            <option value="Perak">Perak</option>
-                            <option value="Perlis">Perlis</option>
-                            <option value="Sabah">Sabah</option>
-                            <option value="Sarawak">Sarawak</option>
-                            <option value="Selangor">Selangor</option>
-                            <option value="Terengganu">Terengganu</option>
-                            <option value="WP Kuala Lumpur">WP Kuala Lumpur</option>
-                            <option value="WP Labuan">WP Labuan</option>
-                            <option value="WP Putrajaya">WP Putrajaya</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="bagaimana-tahu" class="block text-sm font-medium text-gray-700">Bagaimana anda tahu tentang Program Ejen ProcuTrack? <span class="text-red-500">*</span></label>
-                        <select id="bagaimana-tahu" name="bagaimana-tahu" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#215240] focus:border-[#215240] sm:text-sm">
-                            <option value="">-- Sila Pilih --</option>
-                            <option value="Media Sosial (Facebook/Instagram/TikTok)">Media Sosial (Facebook/Instagram/TikTok)</option>
-                            <option value="Enjin Carian (Google, Bing)">Enjin Carian (Google, Bing)</option>
-                            <option value="Rakan/Keluarga">Rakan/Keluarga</option>
-                            <option value="Iklan Online">Iklan Online</option>
-                            <option value="Lain-lain">Lain-lain</option>
-                        </select>
-                    </div>
-                    <div class="flex items-center">
-                        <input id="persetujuan" name="persetujuan" type="checkbox" required class="h-4 w-4 text-[#215240] focus:ring-[#215240] border-gray-300 rounded">
-                        <label for="persetujuan" class="ml-2 block text-sm text-gray-900">
-                            Saya bersetuju dengan <a href="link-ke-terma-syarat.html" target="_blank" class="text-blue-600 hover:underline">Terma & Syarat</a> serta <a href="link-ke-polisi-privasi.html" target="_blank" class="text-blue-600 hover:underline">Polisi Privasi</a> ProcuTrack.
-                        </label>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 cta-button">
-                            Hantar Pendaftaran
-                        </button>
+
+                    <div class="form-navigation">
+                        <button type="submit" class="next-button">Next</button>
+                        <button type="reset" class="clear-form-button">Clear form</button>
                     </div>
                 </form>
-            </div>
 
-            <div id="success-message" class="hidden mt-8 p-4 bg-green-100 text-green-800 rounded-lg text-center" data-aos="fade-up">
-                <p class="font-semibold text-lg">🎉 Tahniah! Pendaftaran anda telah berjaya dihantar.</p>
-                <p class="mt-2">Wakil kami akan menghubungi anda melalui WhatsApp dalam masa 24 jam untuk proses onboarding dan memberikan akses kepada Info Kit Ejen. Sila semak juga folder spam/junk anda untuk emel daripada kami.</p>
-                <p class="mt-4">Untuk sebarang pertanyaan segera, sila WhatsApp kami di <a href="https://wa.me/60195165883" target="_blank" class="text-green-700 font-bold hover:underline">019-5165883</a>.</p>
-                <a href="index.html" class="mt-6 inline-block bg-[#215240] text-white font-bold py-3 px-6 rounded-lg cta-button">Kembali ke Laman Utama</a>
-            </div>
+                </div>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="text-white">
         <div class="container mx-auto px-6 text-center">
-            <p>© 2024 ProcuTrack. Hak Cipta Terpelihara.</p>
-            <p class="text-sm text-gray-400 mt-1">ProcuTrack - Kos Lebih Bijak, Bisnes Lebih Laju!</p>
-            <div class="mt-2 text-sm">
-                <a href="link-ke-terma-syarat.html" class="text-gray-400 hover:text-white mx-2">Terma & Syarat</a>
-                <span class="text-gray-400">|</span>
-                <a href="link-ke-polisi-privasi.html" class="text-gray-400 hover:text-white mx-2">Polisi Privasi</a>
+            <p>© 2025 ProcuTrack. Hak Cipta Terpelihara.</p>
+            <p class="footer-bottom-text">ProcuTrack - Kos Lebih Bijak, Bisnes Lebih Laju!</p>
+            <div class="footer-links-wrapper">
+                <a href="link-ke-terma-syarat.html" class="mx-2">Terma & Syarat</a>
+                <span>|</span>
+                <a href="link-ke-polisi-privasi.html" class="mx-2">Polisi Privasi</a>
+            </div>
+
+            <div class="google-forms-info-footer">
+                <p>Never submit passwords through Google Forms.</p>
+                <p class="mt-2">This content is neither created nor endorsed by Google. -
+                    <a href="#" class="inline-block mx-1">Contact form owner</a> -
+                    <a href="#" class="inline-block mx-1">Terms of Service</a> -
+                    <a href="#" class="inline-block mx-1">Privacy Policy</a>
+                </p>
+                <a href="#" class="report-link">Does this form look suspicious? Report</a>
+                <p class="google-forms-brand-text">Google Forms</p>
             </div>
         </div>
     </footer>
@@ -191,7 +459,6 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const hamburgerPath = document.getElementById('hamburger-path');
-            const navLinks = mobileMenu.querySelectorAll('a');
 
             const hamburgerD = "M4 6h16M4 12h16m-7 6h7";
             const closeD = "M6 18L18 6M6 6l12 12";
@@ -209,86 +476,37 @@
 
             mobileMenuButton.addEventListener('click', toggleMenu);
 
-            navLinks.forEach(link => {
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMenu(); // Close mobile menu when a link is clicked
+                        toggleMenu();
                     }
                 });
             });
 
-            // Highlight active navigation link
-            const desktopNavLinks = document.querySelectorAll('#header .lg\\:flex a');
-            const allNavLinks = document.querySelectorAll('#header nav a'); // Combined for better mobile/desktop handling
+            // Handle form submission (client-side simulation)
+            const formContainer = document.querySelector('.form-container');
+            const formElement = formContainer.querySelector('form');
+            // Removed direct references to navigationButtons and googleFormsFooter from formContainer scope
 
-            function highlightActiveNav() {
-                const currentPathname = window.location.pathname.split('/').pop();
-                const currentHash = window.location.hash;
+            formElement.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual form submission
 
-                allNavLinks.forEach(link => {
-                    let linkHref = link.getAttribute('href');
-                    let linkPath = linkHref.split('#')[0].split('/').pop();
-                    let linkHash = linkHref.includes('#') ? '#' + linkHref.split('#')[1] : '';
+                // Simulate success state (hide form, show success message if you implement one)
+                console.log('Form submitted!');
+                alert('Borang telah berjaya dihantar! (Ini adalah simulasi).'); // Or show a proper success message
+                formElement.reset(); // Clear the form fields
+            });
 
-                    link.classList.remove('nav-active-link');
-                    link.classList.add('text-white', 'hover:text-[#EBF2EE]'); // Reset to default
-
-                    // Handle root index.html
-                    if ((currentPathname === 'index.html' || currentPathname === '') && (linkPath === 'index.html' || linkPath === '')) {
-                        link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
-                        link.classList.add('nav-active-link');
-                    } 
-                    // Handle specific pages like register.html, bahan-hq.html
-                    else if (currentPathname === linkPath && currentPathname !== 'index.html' && currentPathname !== '') {
-                        link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
-                        link.classList.add('nav-active-link');
-                    }
-                });
-
-                 // If on index.html and there's a hash, highlight the anchor
-                if ((currentPathname === 'index.html' || currentPathname === '') && currentHash) {
-                    allNavLinks.forEach(link => {
-                        if (link.getAttribute('href') === 'index.html' + currentHash || link.getAttribute('href') === currentHash) {
-                            link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
-                            link.classList.add('nav-active-link');
-                        }
+            // Smooth scrolling for internal links (if any, typically from header)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
                     });
-                }
-            }
-
-            highlightActiveNav(); // Call on initial load
-
-            // Optional: Re-highlight on hash change if staying on index.html
-            window.addEventListener('hashchange', highlightActiveNav);
-
-
-            // Handle form submission
-            const registrationForm = document.getElementById('registration-form');
-            const successMessage = document.getElementById('success-message');
-
-            registrationForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
-
-                // Here, you would typically send the form data to a server
-                // For demonstration, we'll just show the success message
-                
-                // Example of collecting form data (for your reference if you implement backend)
-                const formData = {
-                    fullName: document.getElementById('nama-penuh').value,
-                    email: document.getElementById('emel').value,
-                    phoneNumber: document.getElementById('no-telefon').value,
-                    state: document.getElementById('negeri').value,
-                    howDidYouHear: document.getElementById('bagaimana-tahu').value,
-                    agreedToTerms: document.getElementById('persetujuan').checked
-                };
-                console.log('Form data submitted:', formData);
-
-                // Simulate API call (e.g., 1-2 seconds delay)
-                setTimeout(() => {
-                    registrationForm.classList.add('hidden'); // Hide the form
-                    successMessage.classList.remove('hidden'); // Show the success message
-                    AOS.refresh(); // Refresh AOS to trigger animation for the success message
-                }, 1000); 
+                });
             });
         });
     </script>
