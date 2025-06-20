@@ -69,14 +69,22 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         /* PERATURAN CSS UNTUK HERO HEADING & NAVIGATION HIGHLIGHT */
+        /* Gaya spesifik untuk hero section baru */
         #hero h1 {
             font-family: 'Playfair Display', serif;
-            color: #215240 !important; /* Hijau Gelap asal */
+            color: white !important; 
             font-weight: 800;
             letter-spacing: -0.03em;
+            font-size: 4rem; /* Saiz lebih besar */
+            line-height: 1.1; /* Line height yang lebih ketat */
+        }
+        @media (min-width: 768px) { /* Saiz lebih besar untuk desktop */
+            #hero h1 {
+                font-size: 6rem; /* Lebih besar untuk skrin besar */
+            }
         }
         #hero p {
-            color: #555; /* Warna teks hero yang lebih lembut */
+            color: rgba(255,255,255,0.8) !important; /* Warna teks hero yang lebih lembut */
         }
         /* Founder Spotlight background */
         #founder-spotlight {
@@ -103,9 +111,9 @@
             box-shadow: 0 8px 20px rgba(250, 204, 21, 0.6);
         }
 
-        /* Perubahan warna untuk elemen spesifik */
+        /* Perubahan warna untuk elemen spesifik di seluruh laman */
         h1, h2, h3, h4 {
-            color: #215240 !important; /* Hijau Gelap asal */
+            color: #215240 !important; /* Hijau Gelap asal, kecuali hero h1 */
         }
         /* Link navigasi default & hover */
         #header nav a {
@@ -239,17 +247,26 @@
     </header>
 
     <main>
-        <section id="hero" class="bg-gradient-to-r from-gray-100 to-white pt-20 pb-28" data-aos="fade-up">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-                    Jana Pendapatan <span class="text-[#215240]">Lumayan</span> Sebagai Ejen ProcuTrack
-                </h1>
-                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-                    Sertai program ejen eksklusif kami tanpa modal, tanpa perlu simpan stok, dan tanpa pening kepala urus logistik. Fokus pada membina rangkaian dan jana komisen lumayan setiap bulan.
-                </p>
-                <a href="register.html" class="bg-[#215240] text-white font-bold py-4 px-12 rounded-full text-xl cta-button inline-block transform hover:scale-105">
-                    Mula Kejayaan Anda Sekarang →
-                </a>
+        <section id="hero" class="relative bg-[#0B2017] pt-20 pb-28 min-h-[70vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+            <div class="container mx-auto px-6 relative z-10 flex flex-col justify-between h-full py-16 text-center md:text-left">
+                <div class="absolute top-8 left-6 text-white text-base md:text-lg font-medium opacity-80">
+                    ProcuTrack
+                </div>
+
+                <div class="flex flex-col items-center justify-center flex-grow text-white md:items-start">
+                    <h1 class="font-extrabold mb-6">
+                        Jana Pendapatan <span class="text-[#FACC15]">Lumayan</span> Sebagai Ejen ProcuTrack
+                    </h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto md:mx-0 mb-10 leading-relaxed">
+                        Sertai program ejen eksklusif kami tanpa modal, tanpa perlu simpan stok, dan tanpa pening kepala urus logistik. Fokus pada membina rangkaian dan jana komisen lumayan setiap bulan.
+                    </p>
+                </div>
+
+                <div class="absolute bottom-8 right-6">
+                    <a href="register.html" class="bg-transparent text-white border-2 border-white font-bold py-4 px-12 rounded-full text-xl inline-block transform hover:scale-105 transition-all duration-300 hover:bg-white hover:text-[#0B2017] shadow-lg">
+                        Mula Kejayaan Anda Sekarang →
+                    </a>
+                </div>
             </div>
         </section>
 
