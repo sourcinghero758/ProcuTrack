@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Ejen ProcuTrack - Jana Pendapatan Lumayan Tanpa Risiko</title>
     <meta name="description" content="Sertai program ejen eksklusif ProcuTrack tanpa modal! Jana komisen lumayan dengan memudahkan bisnes import produk premium dari China ke Malaysia. Latihan komprehensif & sokongan berterusan disediakan.">
-    <meta name="keywords" content="ejen procutrack, program ejen, jana pendapatan, tanpa modal, dropship malaysia, import china malaysia, komisen, side income, peluang bisnes, procurement agent, ejen premium, import eksklusif">
+    <meta name="keywords" content="ejen procutrack , program ejen, jana pendapatan, tanpa modal, dropship malaysia, import china malaysia, komisen, side income, peluang bisnes, procurement agent, ejen premium, import eksklusif">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* Penyesuaian Global untuk keanggunan */
+        html, body {
+            height: 100%; /* Memastikan html dan body mengisi ketinggian penuh */
+            /* Menggunakan warna teks yang sedikit lebih lembut untuk keanggunan */
+            color: #4A4A4A; /* Dari #333 kepada kelabu yang lebih lembut */
+        }
         body {
             font-family: 'Poppins', sans-serif; /* Font moden */
             background-color: #F5F5F0; /* Kelabu cerah asal */
             animation: fadeIn 0.5s ease-in-out;
-            color: #333; /* Warna teks asas */
         }
+
+        /* Default line-height for paragraphs for better readability */
+        p {
+            line-height: 1.6; 
+        }
+
         /* Style untuk butang CTA */
         .cta-button {
             transition: all 0.3s ease;
@@ -28,63 +39,81 @@
             color: white;
             border-radius: 0.5rem;
             box-shadow: 0 4px 15px rgba(33, 82, 64, 0.3); /* Shadow dengan warna hijau gelap */
+            /* Letter spacing ringan untuk butang */
+            letter-spacing: 0.02em; 
         }
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(33, 82, 64, 0.4);
             background-color: #1A4234; /* Hijau Gelap sedikit lagi */
         }
-        /* Style untuk butang CTA sekunder (merah gelap) */
-        .cta-button-secondary {
-            background-color: #C62828; /* Merah Gelap */
-        }
-        .cta-button-secondary:hover {
-            background-color: #A02020; /* Merah Gelap hover */
-        }
-        .chart-container {
+        /* Gaya dropdown menu */
+        .dropdown {
             position: relative;
-            width: 100%;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 45vh;
-            background-color: #FFFFFF;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: inline-block; /* Untuk desktop */
         }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 450px;
-            }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #215240; /* Sama dengan header */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            top: calc(100% + 10px); /* Jarakkan dari parent link */
+            left: 50%; /* Tengah relatif kepada parent dropdown */
+            transform: translateX(-50%); /* Laraskan untuk tengah tepat */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
         }
-        .feature-card {
-            transition: all 0.3s ease;
-            border-radius: 1rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%);
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        .dropdown-content a {
+            color: white !important; /* Pastikan teks sub-menu putih */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center; /* Tengah teks sub-menu */
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            white-space: nowrap; /* Pastikan teks tidak patah */
+            font-size: 1rem; /* Saiz teks untuk sub-menu dropdown */
         }
+        .dropdown-content a:hover {
+            background-color: #1A4234; /* Warna hover untuk sub-menu */
+        }
+
         /* PERATURAN CSS UNTUK HERO HEADING & NAVIGATION HIGHLIGHT */
-        /* Gaya spesifik untuk hero section baru */
         #hero h1 {
             font-family: 'Playfair Display', serif;
             color: white !important; 
             font-weight: 800;
-            letter-spacing: -0.03em;
-            font-size: 4rem; /* Saiz lebih besar */
+            letter-spacing: -0.05em; /* Lebih ketat untuk tajuk besar */
+            font-size: 3.5rem; /* Saiz dikecilkan sedikit untuk mobile default */
             line-height: 1.1; /* Line height yang lebih ketat */
+            /* Sedikit shadow pada teks untuk kedalaman */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3); 
         }
-        @media (min-width: 768px) { /* Saiz lebih besar untuk desktop */
+        @media (min-width: 768px) { /* Saiz untuk tablet */
             #hero h1 {
-                font-size: 6rem; /* Lebih besar untuk skrin besar */
+                font-size: 4rem; /* Saiz dikecilkan untuk skrin sederhana/tablet */
             }
         }
+        @media (min-width: 1024px) { /* Untuk desktop (lg breakpoint) */
+            #hero h1 {
+                font-size: 4.5rem; /* Saiz dikecilkan untuk fit ke dalam kolum pada desktop */
+            }
+        }
+        
         #hero p {
             color: rgba(255,255,255,0.8) !important; /* Warna teks hero yang lebih lembut */
+            line-height: 1.7; /* Line height untuk perenggan hero */
         }
         /* Founder Spotlight background */
         #founder-spotlight {
@@ -95,9 +124,11 @@
             font-family: 'Playfair Display', serif;
             color: white !important;
             font-weight: 700;
+            letter-spacing: -0.02em; /* Letter spacing untuk tajuk h2 */
         }
         #founder-spotlight p {
             color: rgba(255,255,255,0.85) !important;
+            line-height: 1.7; /* Line height untuk perenggan founder spotlight */
         }
         #founder-spotlight .cta-button {
             background-color: #FACC15; /* Kuning asal */
@@ -105,6 +136,7 @@
             font-weight: 700;
             padding: 0.8rem 2.5rem;
             box-shadow: 0 4px 15px rgba(250, 204, 21, 0.4);
+            letter-spacing: 0.02em;
         }
         #founder-spotlight .cta-button:hover {
             background-color: #FFDE00; /* Kuning lebih terang untuk hover */
@@ -114,12 +146,15 @@
         /* Perubahan warna untuk elemen spesifik di seluruh laman */
         h1, h2, h3, h4 {
             color: #215240 !important; /* Hijau Gelap asal, kecuali hero h1 */
+            letter-spacing: -0.01em; /* Letter spacing default untuk tajuk lain */
         }
-        /* Link navigasi default & hover */
+        /* Link navigasi default & hover - DI SINI PERUBAHAN UTAMA UNTUK BESARKAN NAVIGASI */
         #header nav a {
             color: rgba(255,255,255,0.7);
             font-weight: 500;
             transition: color 0.2s ease;
+            font-size: 1.125rem; /* MEMBESARKAN SAIZ TEKS NAVIGASI */
+            padding: 0.5rem 0.75rem; /* Tambah padding sikit untuk ruang */
         }
         #header nav a:hover {
             color: white;
@@ -141,56 +176,6 @@
             padding-bottom: 4px;
         }
 
-        .range-lg {
-            background-color: #C62828; /* Merah gelap asal */
-            height: 8px;
-            border-radius: 4px;
-        }
-        /* Warna thumb slider */
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #FACC15; /* Kuning untuk thumb slider */
-            cursor: pointer;
-            box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.3);
-            margin-top: -6px;
-        }
-        input[type=range]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #FACC15;
-            cursor: pointer;
-            box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.3);
-        }
-
-        /* Bar carta komisen */
-        #commissionChart {
-            background-color: #FFFFFF !important;
-        }
-        /* Warna komisen value */
-        #commission-value {
-            color: #C62828 !important; /* Nombor komisen jadi merah gelap */
-            font-family: 'Playfair Display', serif;
-            font-weight: 800;
-        }
-        /* Ikon feature card */
-        .feature-card .flex.items-center.justify-center.h-16.w-16.rounded-full.bg-blue-100.text-blue-600.mb-6.text-4xl.mx-auto {
-            background-color: #EBF2EE; /* Latar belakang lingkaran ikon jadi hijau cerah asal */
-            color: #215240; /* Warna ikon dalam lingkaran jadi hijau gelap asal */
-        }
-        /* Ikon accordion FAQ */
-        .accordion-icon {
-            color: #C62828 !important; /* Merah gelap asal */
-            font-weight: bold;
-            transition: transform 0.3s ease; /* Transisi untuk putaran ikon */
-        }
-        .accordion-icon.rotate-45 {
-            transform: rotate(45deg);
-        }
-
         /* Warna teks footer */
         footer p, footer a {
             color: rgba(255,255,255,0.7) !important;
@@ -209,6 +194,93 @@
                 opacity: 1;
             }
         }
+
+        /* Mobile specific dropdown styles */
+        @media (max-width: 1023px) { /* Tailwind's 'lg' breakpoint is 1024px */
+            .dropdown-content {
+                position: relative; /* Change to relative for mobile to stack normally */
+                box-shadow: none; /* Remove shadow for mobile */
+                border-radius: 0; /* Remove border-radius */
+                background-color: rgba(33, 82, 64, 0.9); /* Slightly darker for sub-items */
+                min-width: unset; /* Remove min-width constraint */
+                width: 100%; /* Take full width */
+                left: unset;
+                transform: unset;
+                opacity: 1; /* Always visible when parent is "open" */
+                visibility: visible;
+                padding-left: 20px; /* Indent sub-items */
+            }
+            .dropdown-content a {
+                text-align: center; /* Center text for mobile */
+                padding: 8px 16px; /* Adjust padding for mobile sub-items */
+                font-size: 1.05rem; /* Saiz untuk sub-menu dropdown mobile */
+            }
+            .dropdown:hover .dropdown-content {
+                display: none; /* Override hover for mobile, JS will control visibility */
+            }
+            .dropdown.open .dropdown-content {
+                display: block; /* Controlled by JS on mobile */
+            }
+        }
+
+        /* Mobile menu items - DI SINI PERUBAHAN UNTUK BESARKAN MENU MOBILE */
+        #mobile-menu a, .mobile-dropdown-toggle {
+            font-size: 1.125rem; /* Membesarkan saiz teks menu mobile */
+            padding: 12px 0; /* Sesuaikan padding */
+            font-weight: 500; /* Konsistenkan font-weight */
+        }
+
+        /* Penyesuaian pada seksyen Daftar Utama untuk kepadatan teks yang lebih baik */
+        #daftar-utama p {
+            line-height: 1.7; /* Line height untuk perenggan dalam daftar utama */
+        }
+        #daftar-utama .text-gray-300 {
+            color: rgba(255,255,255,0.85) !important; /* Menaikkan kecerahan sedikit */
+        }
+        /* Penyesuaian saiz teks hubungi wakil rasmi */
+        #daftar-utama .bg-white p {
+            line-height: 1.5; /* Line height lebih rapat untuk maklumat perhubungan */
+        }
+
+        /* CSS Tambahan untuk Hero Layout Dua Kolum */
+        #hero .content-wrapper {
+            display: flex;
+            flex-direction: column; /* Default untuk mobile: atas-bawah */
+            align-items: center; /* Tengah secara horizontal */
+            gap: 4rem; /* Jarak antara teks dan gambar */
+            height: 100%; /* Penting untuk flex-grow */
+            width: 100%;
+            justify-content: center; /* Tengah kandungan secara menegak dalam flexbox */
+        }
+
+        @media (min-width: 1024px) { /* Untuk desktop (lg breakpoint) */
+            #hero .content-wrapper {
+                flex-direction: row; /* Desktop: sebelah-menyebelah */
+                text-align: left; /* Teks ke kiri */
+                justify-content: space-between; /* Untuk menyebarkan item secara horizontal */
+                gap: 2rem; /* Kurangkan gap untuk desktop */
+            }
+            #hero .text-content {
+                flex: 1; /* Ambil ruang yang tersedia */
+                max-width: 50%; /* Hadkan lebar kolum teks */
+                text-align: left; /* Pastikan teks align kiri */
+            }
+            #hero .image-content {
+                flex: 1; /* Ambil ruang yang tersedia */
+                max-width: 50%; /* Hadkan lebar kolum gambar */
+                display: flex;
+                justify-content: center; /* Tengah gambar */
+                align-items: center; /* Tengah gambar secara menegak */
+            }
+        }
+        
+        #hero .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem; /* Sudut bulat untuk gambar */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Bayangan untuk gambar */
+        }
+
     </style>
 </head>
 <body class="text-gray-800">
@@ -216,56 +288,96 @@
     <header id="header" class="bg-[#215240] shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-white">Procu<span class="text-white">Track</span></a>
-            <div class="hidden lg:flex items-center space-x-6"> 
-                <a href="index.html#pengenalan-syarikat">Tentang Kami</a>
-                <a href="index.html#kelebihan">Kelebihan</a>
-                <a href="index.html#cara-kerja">Cara Kerja</a>
-                <a href="index.html#pendapatan">Potensi Pendapatan</a>
-                <a href="index.html#sokongan">Sokongan</a>
-                <a href="bahan-hq.html" id="nav-bahan-hq-desktop">Bahan HQ</a>
-                <a href="index.html#faq">Soalan Lazim</a>
+            
+            <div class="hidden lg:flex items-center space-x-6 mx-auto"> 
+                <a href="index.html" class="nav-main-link">Home</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="nav-main-link">About Us <span class="ml-1 text-xs">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="tentang-kami.html">Tentang Kami</a>
+                        <a href="soalan-lazim.html">Soalan Lazim</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="nav-main-link">Activity <span class="ml-1 text-xs">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="key-in.html">Key-In Tempahan</a>
+                        <a href="register.html">Daftar Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="nav-main-link">Careers <span class="ml-1 text-xs">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="kelebihan.html">Kelebihan</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="nav-main-link">Shop <span class="ml-1 text-xs">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="bahan-hq.html">Bahan HQ</a>
+                        <a href="potensi-pendapatan.html">Potensi Pendapatan</a>
+                        <a href="sokongan.html">Sokongan</a>
+                    </div>
+                </div>
             </div>
-            <a href="key-in.html" class="bg-[#C62828] text-white font-bold py-3 px-8 rounded-lg cta-button cta-button-secondary">Key-In Tempahan</a>
-            <button id="mobile-menu-button" class="lg:hidden text-white">
+            
+            <button id="mobile-menu-button" class="lg:hidden text-white ml-auto"> 
                 <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden bg-[#215240] py-4">
-            <a href="index.html#pengenalan-syarikat" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a>
-            <a href="index.html#kelebihan" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
-            <a href="index.html#cara-kerja" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Cara Kerja</a>
-            <a href="index.html#pendapatan" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Potensi Pendapatan</a>
-            <a href="index.html#sokongan" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Sokongan</a>
-            <a href="bahan-hq.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white" id="nav-bahan-hq-mobile">Bahan HQ</a>
-            <a href="index.html#faq" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Soalan Lazim</a>
-            <a href="register.html" class="block text-center py-3 px-4 text-base bg-[#FACC15] text-[#215240] font-bold cta-button mt-4 mx-6">Daftar Sekarang!</a>
-            <a href="key-in.html" class="block text-center py-3 px-4 text-base bg-[#C62828] text-white font-bold cta-button mt-2 mx-6">Key-In Tempahan</a>
+            <a href="index.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Home</a>
+            <div class="mobile-dropdown-toggle block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white cursor-pointer">About Us <span class="ml-1 text-xs">&#9662;</span></div>
+            <div class="mobile-dropdown-content hidden">
+                <a href="tentang-kami.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Tentang Kami</a>
+                <a href="soalan-lazim.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Soalan Lazim</a>
+            </div>
+            <div class="mobile-dropdown-toggle block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white cursor-pointer">Activity <span class="ml-1 text-xs">&#9662;</span></div>
+            <div class="mobile-dropdown-content hidden">
+                <a href="key-in.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Key-In Tempahan</a>
+                <a href="register.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Daftar Sekarang</a>
+            </div>
+            <div class="mobile-dropdown-toggle block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white cursor-pointer">Careers <span class="ml-1 text-xs">&#9662;</span></div>
+            <div class="mobile-dropdown-content hidden">
+                <a href="kelebihan.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Kelebihan</a>
+            </div>
+            <div class="mobile-dropdown-toggle block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white cursor-pointer">Shop <span class="ml-1 text-xs">&#9662;</span></div>
+            <div class="mobile-dropdown-content hidden">
+                <a href="bahan-hq.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Bahan HQ</a>
+                <a href="potensi-pendapatan.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Potensi Pendapatan</a>
+                <a href="sokongan.html" class="block text-center py-2 px-4 text-base text-white hover:bg-opacity-10 hover:bg-white">Sokongan</a>
+            </div>
             <a href="info-kit/MODUL-LENGKAP-EJEN-PROCUTRACK.pdf" target="_blank" download class="block text-center py-3 px-4 text-base bg-[#215240] text-white font-bold cta-button mt-2 mx-6">Muat Turun Info Kit</a>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="relative bg-[#0B2017] pt-20 pb-28 min-h-[70vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
-            <div class="container mx-auto px-6 relative z-10 flex flex-col justify-between h-full py-16 text-center md:text-left">
-                <div class="absolute top-8 left-6 text-white text-base md:text-lg font-medium opacity-80">
-                    ProcuTrack
-                </div>
+        <section id="hero" class="relative bg-[#0B2017] pt-20 pb-28 min-h-screen flex items-center justify-center overflow-hidden" data-aos="fade-up">
+            <div class="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center h-full py-16 text-center md:text-left content-wrapper"> 
+                <div class="text-content flex flex-col items-center md:items-start text-white w-full lg:w-1/2">
+                    <div class="text-white text-base md:text-lg font-medium opacity-80 mb-4">
+                        ProcuTrack
+                    </div>
 
-                <div class="flex flex-col items-center justify-center flex-grow text-white md:items-start">
                     <h1 class="font-extrabold mb-6">
-                        Jana Pendapatan <span class="text-[#FACC15]">Lumayan</span> Sebagai Ejen ProcuTrack
+                        📦 “Nak Borong Barang dari China? Tapi Tak Tahu Nak Mula Di Mana?”
+                        <span class="text-[#FACC15]">Kami bantu dari A sampai Z — anda hanya perlu bagi spesifikasi, kami urus vendor, shipping & penghantaran.</span> 
                     </h1>
-                    <p class="text-lg md:text-xl max-w-3xl mx-auto md:mx-0 mb-10 leading-relaxed">
-                        Sertai program ejen eksklusif kami tanpa modal, tanpa perlu simpan stok, dan tanpa pening kepala urus logistik. Fokus pada membina rangkaian dan jana komisen lumayan setiap bulan.
-                    </p>
-                </div>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto md:mx-0 mb-10 leading-relaxed"></p>
 
-                <div class="absolute bottom-8 right-6">
                     <a href="register.html" class="bg-transparent text-white border-2 border-white font-bold py-4 px-12 rounded-full text-xl inline-block transform hover:scale-105 transition-all duration-300 hover:bg-white hover:text-[#0B2017] shadow-lg">
                         Mula Kejayaan Anda Sekarang →
                     </a>
+                </div>
+
+                <div class="image-content w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center items-center">
+                    <img src="https://via.placeholder.com/600x400/0B2017/FACC15?text=Gambar+Anda+Di+Sini" alt="Gambar Barang Borong China" class="object-cover">
                 </div>
             </div>
         </section>
@@ -287,310 +399,8 @@
                 </div>
             </div>
         </section>
-        <section id="pengenalan-syarikat" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12" data-aos="fade-down">
-                    <h2 class="text-4xl font-bold">Pengenalan Syarikat</h2>
-                    <p class="text-xl text-gray-600 mt-2 max-w-3xl mx-auto">Pakar dalam Sourcing & Procurement Bertaraf Global.</p>
-                </div>
-                <div class="max-w-4xl mx-auto space-y-6" data-aos="fade-up">
-                    <p class="text-lg text-gray-700 text-center leading-relaxed">
-ProcuTrack bantu orang bisnes kat Malaysia beli barang dari China dengan cara yang lebih senang, murah dan selamat. Klien tak payah pening fikir shipping, cari supplier atau nego harga — semua kami tolong urus.
-                    </p>
-                    <p class="text-lg text-gray-700 text-center leading-relaxed">
-Lepas klien bagi info barang yang dia nak, team kami akan uruskan semuanya sampai barang selamat sampai ke tangan dia.
-                    </p>
-                    <p class="text-lg text-gray-700 text-center leading-relaxed">
-Dalam masa sama, kami buka peluang untuk sesiapa saja jadi ejen ProcuTrack. Kerja senang je — cari orang yang nak beli barang dari China, kenalkan pada kami, dan ejen akan dapat komisen setiap bulan ikut jumlah pembelian pelanggan tu.
-                    </p>
-                    <p class="text-lg text-gray-700 text-center leading-relaxed">
-Tak perlu modal, tak perlu pegang stok. Ejen fokus cari pelanggan je, HQ akan urus semua dari situ.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="kelebihan" class="py-20 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-down">
-                    <h2 class="text-4xl font-bold">Mengapa Program Ejen ProcuTrack Pilihan Utama Anda?</h2>
-                    <p class="text-xl text-gray-600 mt-2 max-w-3xl mx-auto">Program Ejen ProcuTrack direka untuk memberikan anda kebebasan kewangan dan potensi pendapatan maksimum dengan risiko sifar.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center" data-aos="fade-up">
-                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mb-6 text-4xl mx-auto">
-                            <span class="text-[#215240]">💰</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-[#215240]">Cari prospek</h3>
-                        <p class="text-gray-600 leading-relaxed">Pemilik bisnes yang perlukan produk dari China.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mb-6 text-4xl mx-auto">
-                            <span class="text-[#215240]">📦</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-[#215240]">Kumpul maklumat</h3>
-                        <p class="text-gray-600 leading-relaxed">Maklumat pelanggan & bantu buat pembelian pertama.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mb-6 text-4xl mx-auto">
-                            <span class="text-[#215240]">🚛</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-[#215240]">Key-in data</h3>
-                        <p class="text-gray-600 leading-relaxed">Ke dalam sistem ejen (panduan akan disediakan).</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg feature-card text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mb-6 text-4xl mx-auto">
-                            <span class="text-[#215240]">⏱</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-[#215240]">Terima komisen</h3>
-                        <p class="text-gray-600 leading-relaxed">Setiap bulan berdasarkan pembelian pelanggan.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cara-kerja" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-down">
-                    <h2 class="text-4xl font-bold">KELEBIHAN MENJADI EJEN</h2>
-                    <p class="text-xl text-gray-600 mt-2 max-w-2xl mx-auto">
-                        Hanya 4 langkah mudah dan terancang untuk anda mula menjana pendapatan sebagai ejen ProcuTrack.
-                    </p>
-                </div>
-
-                <div class="relative" data-aos="fade-up">
-                    <div class="hidden lg:block absolute top-[30%] left-0 w-full h-1 bg-gray-200"></div>
-
-                    <div class="grid md:grid-cols-4 gap-8 relative z-10">
-                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">1</div>
-                            <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu pegang stok</h3>
-                            <p class="text-gray-600 text-center leading-relaxed">Semua penghantaran diuruskan oleh ProcuTrack.</p>
-                        </div>
-                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">2</div>
-                            <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Tak perlu urus shipping</h3>
-                            <p class="text-gray-600 text-center leading-relaxed">
-                                Bebas dari sebarang kerumitan urusan logistik, pengangkutan, dan penghantaran dari China ke pintu pelanggan anda.
-                            </p>
-                        </div>
-                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">3</div>
-                            <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Boleh buat sambilan atau sepenuh masa</h3>
-                            <p class="text-gray-600 text-center leading-relaxed">Fleksibel mengikut keupayaan dan masa anda.</p>
-                        </div>
-                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">4</div>
-                            <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">HQ sediakan sokongan</h3>
-                            <p class="text-gray-600 text-center leading-relaxed">Modul latihan, bahan promosi & bantuan berterusan.</p>
-                        </div>
-                    </div>
-
-                    <div class="hidden lg:block absolute top-[72%] left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-gray-200"></div>
-
-                    <div class="flex justify-center mt-10 relative z-10">
-                        <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md w-full md:w-1/2">
-                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[#215240] text-white text-3xl font-bold mb-6 border-4 border-white shadow-lg">5</div>
-                            <h3 class="text-xl font-bold mb-2 text-center text-[#215240]">Potensi pendapatan tinggi</h3>
-                            <p class="text-gray-600 text-center leading-relaxed">Bila bawa pelanggan konsisten.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="pendapatan" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="mb-12 text-center" data-aos="fade-down">
-                    <h2 class="text-4xl font-bold">Kira Potensi Pendapatan Eksklusif Anda</h2>
-                    <p class="text-xl text-gray-600 mt-2 max-w-4xl mx-auto">Gunakan kalkulator interaktif untuk anggaran komisen bulanan berdasarkan prestasi ejen..</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-xl max-w-5xl mx-auto" data-aos="fade-up">
-                    <div class="mb-8">
-                        <label for="sales-slider" class="block text-xl font-semibold text-gray-700 mb-4 text-center">Laraskan Anggaran Jualan Bulanan Pelanggan Anda:</label>
-                        <input id="sales-slider" type="range" min="0" max="200000" value="50000" step="1000" class="w-full range-lg">
-                        <p class="text-center text-4xl font-extrabold text-[#C62828] mt-6">RM <span id="sales-value">50,000</span></p>
-                    </div>
-
-                    <div class="text-center mb-8">
-                        <p class="text-xl text-gray-700">Anggaran Komisen Anda:</p>
-                        <p class="text-6xl font-extrabold text-[#FACC15] my-4 transition-all duration-300">RM <span id="commission-value">2,500</span></p>
-                        <p class="text-lg text-gray-500">pada kadar komisen <span id="commission-rate" class="font-bold"></span></p>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="commissionChart"></canvas>
-                    </div>
-
-                    <div class="mt-12">
-                        <h4 class="text-2xl font-bold text-center mb-6 text-[#215240]">Struktur Komisen Bertingkat yang Menguntungkan</h4>
-                        <div class="overflow-x-auto rounded-lg shadow-inner">
-                            <table class="min-w-full text-left bg-white border border-gray-200">
-                                <thead class="bg-gray-100">
-                                    <tr>
-                                        <th class="py-3 px-6 font-bold uppercase text-sm text-gray-700 border-b-2 border-gray-200">Tier</th>
-                                        <th class="py-3 px-6 font-bold uppercase text-sm text-gray-700 border-b-2 border-gray-200">Jumlah Pembelian Bulanan (RM)</th>
-                                        <th class="py-3 px-6 font-bold uppercase text-sm text-gray-700 border-b-2 border-gray-200">Kadar Komisen</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="py-3 px-6 border-b border-gray-200">1</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">0 - 30,000</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">5%</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="py-3 px-6 border-b border-gray-200">2</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">30,001 - 60,000</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">5%</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="py-3 px-6 border-b border-gray-200">3</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">60,001 - 90,000</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">5%</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="py-3 px-6 border-b border-gray-200">4</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">90,001 - 120,000</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">6%</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="py-3 px-6 border-b border-gray-200">5</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">120,001 - 150,000</td>
-                                        <td class="py-3 px-6 border-b border-gray-200">7%</td>
-                                    </tr>
-                                   <tr class="hover:bg-gray-50 bg-[#F5F5F0] font-semibold">
-                                        <td class="py-3 px-6 border-b border-gray-200 text-[#215240]">Super Ejen</td>
-                                        <td class="py-3 px-6 border-b border-gray-200 text-[#215240]">150,001 ke atas</td>
-                                        <td class="py-3 px-6 border-b border-gray-200 text-[#215240]">7.5% + Bonus Eksklusif</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="text-sm text-gray-600 mt-6 text-center">Komisen hanya akan dibayar selepas pelanggan membuat bayaran penuh untuk pesanan mereka. Jika pelanggan membatalkan pesanan, komisen berkaitan akan ditolak daripada pembayaran bulan berikutnya.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sokongan" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-down">
-                    <h2 class="text-4xl font-bold">Kami Lengkapkan Anda Untuk Berjaya: Sokongan Komprehensif</h2>
-                    <p class="text-xl text-gray-600 mt-2 max-w-3xl mx-auto">Menjadi ejen kami bermakna anda adalah sebahagian daripada keluarga ProcuTrack. Kami sediakan semua alatan, pengetahuan, dan sokongan berterusan yang anda perlukan untuk mencapai kejayaan yang cemerlang.</p>
-                </div>
-                <div class="max-w-4xl mx-auto">
-                    <div class="space-y-6">
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Panduan Latihan Komprehensif & Mudah Akses
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Setiap ejen yang berdaftar akan menerima akses penuh kepada modul latihan eksklusif kami dalam format video dan PDF. Kandungan ini merangkumi semua aspek penting, dari asas perolehan hingga strategi pemasaran berkesan, direka untuk melengkapkan anda menjadi ejen yang berjaya.
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="100">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Skrip Prospek & Bahan Promosi Profesional
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Dapatkan akses kepada skrip prospek yang terbukti berkesan dan templat mesej (seperti WhatsApp) untuk memudahkan anda berhubung dengan bakal pelanggan. Kami juga sediakan bahan promosi yang direka secara profesional, termasuk poster visual dan testimoni pelanggan yang menarik.
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="200">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Akses ke Dashboard Laporan Prestasi & Komisen Real-Time
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Kami menyediakan dashboard ejen yang canggih dan mudah digunakan, membolehkan anda memantau prestasi pelanggan anda secara telus dan melihat perincian komisen anda dalam masa nyata. Ketelusan ini penting untuk anda merancang strategi dan meningkatkan pendapatan.
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="300">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Sesi Bimbingan Berkala & Komuniti Sokongan Aktif
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Sertai sesi coaching dan webinar berkala bersama pakar-pakar dari ibu pejabat ProcuTrack. Anda juga akan menjadi sebahagian daripada komuniti sokongan berkumpulan (WhatsApp/Telegram) di mana anda boleh bertukar idea, bertanya soalan, dan mendapatkan motivasi daripada ejen-ejen lain.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="py-20 bg-gray-100">
-             <div class="container mx-auto px-6">
-                 <div class="text-center mb-16" data-aos="fade-down">
-                     <h2 class="text-4xl font-bold">Soalan Lazim (FAQ) Mengenai Program Ejen ProcuTrack</h2>
-                     <p class="text-xl text-gray-600 mt-2 max-w-2xl mx-auto">Kami faham anda mungkin mempunyai beberapa pertanyaan. Di sini kami kumpulkan dan jawab persoalan yang sering diajukan untuk memberi anda gambaran yang jelas.</p>
-                 </div>
-                 <div class="max-w-4xl mx-auto">
-                    <div class="space-y-6">
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Siapakah yang layak menjadi ejen ProcuTrack?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Sesiapa sahaja warganegara Malaysia berumur 18 tahun ke atas yang berminat untuk menjana pendapatan tambahan atau sepenuh masa. Program ini amat sesuai untuk suri rumah, pelajar, pekerja sepenuh masa, atau sesiapa sahaja yang mempunyai **rangkaian kenalan pemilik bisnes kecil dan sederhana (PKS) atau penjual online** yang memerlukan produk berkualiti dari China.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="100">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Adakah sebarang bayaran dikenakan untuk pendaftaran?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Tidak. Pendaftaran sebagai ejen ProcuTrack adalah **percuma sepenuhnya**. Kami berpegang teguh kepada model perniagaan tanpa risiko untuk ejen kami. Anda boleh mula menjana pendapatan serta-merta selepas pendaftaran dan melengkapkan latihan awal yang kami sediakan.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="200">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Bagaimanakah proses latihan dan onboarding ejen dijalankan?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Selepas pendaftaran berjaya, anda akan diberikan akses eksklusif ke **modul latihan lengkap dalam format video dan PDF** melalui portal ejen kami. Selain itu, anda juga akan dijemput ke dalam **kumpulan sokongan WhatsApp/Telegram eksklusif** di mana anda boleh berinteraksi dengan pasukan HQ dan rakan-rakan ejen lain untuk mendapatkan bimbingan dan motivasi.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="300">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Bagaimanakah dan bilakah komisen akan dibayar?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Komisen akan dibayar pada **minggu pertama setiap bulan**. Jumlah komisen akan dikreditkan terus ke akaun bank anda setelah kami mengira jumlah jualan sah daripada semua pelanggan yang anda perkenalkan pada bulan sebelumnya. Anda boleh memantau butiran komisen anda dengan mudah melalui dashboard ejen peribadi anda.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="400">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Berapa banyak masa yang perlu saya luangkan sebagai ejen?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                ProcuTrack menawarkan **masa yang sangat fleksibel**. Anda boleh menjadikannya sebagai pendapatan sampingan dengan meluangkan beberapa jam seminggu, atau sebagai kerjaya sepenuh masa untuk potensi pendapatan yang lebih tinggi. Kuncinya adalah konsisten dalam mencari dan membantu pelanggan, tanpa terikat dengan waktu pejabat.
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-sm accordion-item" data-aos="fade-up" data-aos-delay="500">
-                            <button class="flex justify-between items-center w-full text-left font-semibold text-xl accordion-header text-[#215240]">
-                                Apakah yang berlaku jika akaun ejen saya tidak aktif?
-                                <span class="accordion-icon text-red-600">+</span>
-                            </button>
-                            <div class="accordion-content hidden mt-4 text-gray-700 text-left leading-relaxed">
-                                Akaun ejen yang tidak mempunyai sebarang aktiviti atau jualan pelanggan selama tiga (3) bulan berturut-turut akan digantung sementara. Walau bagaimanapun, anda boleh **mengaktifkannya semula dengan mudah dengan menghubungi pasukan sokongan kami** dan memulakan semula aktiviti jualan anda. Kami sentiasa sedia membantu anda kembali ke landasan kejayaan.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="daftar" class="py-24 bg-[#215240] text-white" data-aos="fade-up">
+        
+        <section id="daftar-utama" class="py-24 bg-[#215240] text-white" data-aos="fade-up">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Sedia Untuk Mengubah Hidup Anda?</h2>
                 <p class="text-lg md:text-xl max-w-4xl mx-auto mb-10 text-gray-300 leading-relaxed">
@@ -646,7 +456,7 @@ Tak perlu modal, tak perlu pegang stok. Ejen fokus cari pelanggan je, HQ akan ur
             const hamburgerD = "M4 6h16M4 12h16m-7 6h7";
             const closeD = "M6 18L18 6M6 6l12 12";
 
-            function toggleMenu() {
+            function toggleMobileMenu() {
                 const isOpen = !mobileMenu.classList.contains('hidden');
                 if (isOpen) {
                     mobileMenu.classList.add('hidden');
@@ -657,214 +467,86 @@ Tak perlu modal, tak perlu pegang stok. Ejen fokus cari pelanggan je, HQ akan ur
                 }
             }
 
-            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
             /* Tutup menu mobile bila pautan diklik */
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMenu();
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            /* Handle mobile dropdown toggles */
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    if (content && content.classList.contains('mobile-dropdown-content')) {
+                        content.classList.toggle('hidden');
                     }
                 });
             });
 
             /* Highlight pautan navigasi aktif */
-            const allNavLinks = document.querySelectorAll('#header nav a');
+            const allNavLinks = document.querySelectorAll('#header nav a.nav-main-link, .dropdown-content a, #mobile-menu a');
 
             function highlightActiveNav() {
                 const currentPathname = window.location.pathname.split('/').pop();
-                const currentHash = window.location.hash;
-
+                
                 allNavLinks.forEach(link => {
                     let linkHref = link.getAttribute('href');
+                    if (!linkHref) return; 
+
                     let linkPath = linkHref.split('#')[0].split('/').pop();
-                    let linkHash = linkHref.includes('#') ? '#' + linkHref.split('#')[1] : '';
 
                     link.classList.remove('nav-active-link');
-                    if (!link.classList.contains('cta-button') && !link.classList.contains('cta-button-secondary')) { // Pastikan butang CTA tak terkesan
-                        link.classList.add('text-white', 'hover:text-[#EBF2EE]'); // Reset kepada gaya asal
+                    if (link.classList.contains('nav-main-link')) { 
+                        link.classList.add('text-white', 'hover:text-[#EBF2EE]');
+                    }
+                    if (link.classList.contains('mobile-dropdown-toggle')) {
+                        link.classList.add('text-white', 'hover:bg-opacity-10', 'hover:bg-white');
                     }
 
-                    // Logik untuk halaman utama (index.html)
-                    if ((currentPathname === 'index.html' || currentPathname === '') && (linkPath === 'index.html' || linkPath === '')) {
+                    if (linkPath === 'index.html' || linkPath === '') {
+                        if (currentPathname === 'index.html' || currentPathname === '') {
+                             link.classList.add('nav-active-link');
+                             if (link.classList.contains('nav-main-link')) { 
+                                 link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
+                             }
+                        }
+                    } else if (currentPathname === linkPath) {
                         link.classList.add('nav-active-link');
-                        link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
-                    }
-                    // Logik untuk halaman spesifik (bahan-hq.html, pasukan-pengasas.html, register.html, key-in.html)
-                    else if (currentPathname === linkPath && currentPathname !== 'index.html' && currentPathname !== '') {
-                        link.classList.add('nav-active-link');
-                        link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
-                    }
-                    // Logik untuk anchor di halaman utama (index.html#pengenalan-syarikat)
-                    if ((currentPathname === 'index.html' || currentPathname === '') && currentHash) {
-                        if (link.getAttribute('href') === 'index.html' + currentHash || link.getAttribute('href') === currentHash) {
-                            // Nyahaktifkan pautan lain yang mungkin aktif pada index.html dahulu
-                            allNavLinks.forEach(l => {
-                                if ((l.getAttribute('href').startsWith('index.html#') || l.getAttribute('href') === 'index.html' || l.getAttribute('href') === '') && !l.classList.contains('cta-button') && !l.classList.contains('cta-button-secondary')) {
-                                    if (l !== link) {
-                                        l.classList.remove('nav-active-link');
-                                        l.classList.add('text-white', 'hover:text-[#EBF2EE]');
-                                    }
-                                }
-                            });
-                            link.classList.add('nav-active-link');
+                        if (link.classList.contains('nav-main-link')) { 
                             link.classList.remove('text-white', 'hover:text-[#EBF2EE]');
                         }
-                    }
-                });
-            }
 
-            highlightActiveNav(); // Panggil fungsi semasa halaman dimuat
-            window.addEventListener('hashchange', highlightActiveNav); // Panggil bila hash URL berubah
-            window.addEventListener('scroll', highlightActiveNav); // Panggil bila scroll (untuk nav sticky)
-
-            /* Skrip khusus untuk Kalkulator Komisen (hanya di index.html) */
-            if (document.getElementById('sales-slider')) { // Periksa jika elemen ini wujud
-                const salesSlider = document.getElementById('sales-slider');
-                const salesValueSpan = document.getElementById('sales-value');
-                const commissionValueSpan = document.getElementById('commission-value');
-                const commissionRateSpan = document.getElementById('commission-rate');
-
-                // Tier komisen
-                const commissionTiers = [
-                    { limit: 30000, rate: 0.05 },
-                    { limit: 60000, rate: 0.05 },
-                    { limit: 90000, rate: 0.05 },
-                    { limit: 120000, rate: 0.06 },
-                    { limit: 150000, rate: 0.07 },
-                    { limit: Infinity, rate: 0.075 }
-                ];
-
-                // Carta Komisen
-                const ctx = document.getElementById('commissionChart').getContext('2d');
-                const commissionChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Anggaran Komisen Anda'],
-                        datasets: [{
-                            label: 'Komisen Bulanan (RM)',
-                            data: [0],
-                            backgroundColor: '#FACC15',
-                            borderColor: '#CA8A04',
-                            borderWidth: 1,
-                            borderRadius: 8
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                grid: {
-                                    color: 'rgba(200, 200, 200, 0.2)'
-                                },
-                                ticks: {
-                                    callback: function(value) {
-                                        return 'RM ' + value.toLocaleString();
-                                    },
-                                    color: '#555',
-                                    font: { size: 14 }
-                                }
-                            },
-                            x: {
-                                grid: { display: false },
-                                ticks: { color: '#555', font: { size: 14 } }
+                        let parentDropdown = link.closest('.dropdown');
+                        if (parentDropdown) {
+                            let parentLink = parentDropdown.querySelector('.nav-main-link');
+                            if (parentLink) {
+                                parentLink.classList.add('nav-active-link');
+                                parentLink.classList.remove('text-white', 'hover:text-[#EBF2EE]');
                             }
-                        },
-                        plugins: {
-                            legend: { display: false },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.dataset.label || '';
-                                        if (label) label += ': ';
-                                        if (context.parsed.y !== null) {
-                                            label += 'RM ' + context.parsed.y.toLocaleString('ms-MY', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                                        }
-                                        return label;
-                                    }
-                                },
-                                titleFont: { size: 16 },
-                                bodyFont: { size: 14 },
-                                padding: 12,
-                                boxPadding: 6,
-                                displayColors: true,
+                        }
+
+                        let mobileParentToggle = link.closest('.mobile-dropdown-content');
+                        if (mobileParentToggle) {
+                            mobileParentToggle.classList.remove('hidden'); 
+                            let toggleButton = mobileParentToggle.previousElementSibling;
+                            if (toggleButton && toggleButton.classList.contains('mobile-dropdown-toggle')) {
+                                toggleButton.classList.add('nav-active-link');
+                                toggleButton.classList.remove('text-white', 'hover:bg-opacity-10', 'hover:bg-white');
                             }
                         }
                     }
                 });
-
-                function updateCommission() {
-                    const sales = parseInt(salesSlider.value);
-                    salesValueSpan.textContent = sales.toLocaleString('ms-MY');
-
-                    let calculatedCommission = 0;
-                    let currentSales = sales; // Gunakan pembolehubah berasingan untuk mengesan baki jualan
-
-                    // Hitung komisen berdasarkan tier
-                    let prevLimit = 0;
-                    for (let i = 0; i < commissionTiers.length; i++) {
-                        const tier = commissionTiers[i];
-                        if (currentSales > prevLimit) { // Semak jika ada jualan yang layak untuk tier ini
-                            // Kira jualan yang benar-benar jatuh dalam julat tier semasa
-                            const applicableSales = Math.min(currentSales, tier.limit) - prevLimit;
-                            calculatedCommission += applicableSales * tier.rate;
-                        }
-                        prevLimit = tier.limit; // Tetapkan had atas tier semasa sebagai had bawah untuk tier seterusnya
-                        if (currentSales <= prevLimit) break; // Berhenti jika semua jualan telah dikira
-                    }
-
-                    let rateText = "0%"; // Default
-                    if (sales > 150000) { rateText = "7.5%+"; }
-                    else if (sales > 120000) { rateText = "7%"; }
-                    else if (sales > 90000) { rateText = "6%"; }
-                    else if (sales > 0) { rateText = "5%"; }
-
-                    commissionValueSpan.textContent = calculatedCommission.toLocaleString('ms-MY', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                    commissionRateSpan.textContent = rateText;
-
-                    commissionChart.data.datasets[0].data[0] = calculatedCommission;
-                    commissionChart.update();
-                }
-
-                salesSlider.addEventListener('input', updateCommission);
-                updateCommission(); // Panggil sekali untuk tetapkan nilai awal
             }
 
-            /* Skrip khusus untuk FAQ Accordion (hanya di index.html) */
-            if (document.querySelector('#faq')) { // Periksa jika bahagian FAQ wujud
-                const accordionItems = document.querySelectorAll('.accordion-item');
-                accordionItems.forEach(item => {
-                    const header = item.querySelector('.accordion-header');
-                    const content = item.querySelector('.accordion-content');
-                    const icon = item.querySelector('.accordion-icon');
-
-                    header.addEventListener('click', () => {
-                        const isVisible = !content.classList.contains('hidden');
-
-                        // Tutup accordion lain
-                        document.querySelectorAll('.accordion-content').forEach(c => {
-                            if (c !== content) {
-                                c.classList.add('hidden');
-                                c.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
-                                c.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotate-45');
-                            }
-                        });
-
-                        // Buka/tutup accordion semasa
-                        if (!isVisible) {
-                            content.classList.remove('hidden');
-                            icon.textContent = '-';
-                            icon.classList.add('rotate-45');
-                        } else {
-                            content.classList.add('hidden');
-                            icon.textContent = '+';
-                            icon.classList.remove('rotate-45');
-                        }
-                    });
-                });
-            }
+            highlightActiveNav(); 
+            window.addEventListener('hashchange', highlightActiveNav); 
+            window.addEventListener('load', highlightActiveNav); 
         });
     </script>
 
